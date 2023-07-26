@@ -75,7 +75,7 @@ export default function Navbar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }} onClick={item => props.setSection(item)}>
+              <Button key={item} sx={{ color: '#fff' }} onClick={() => props.setSection(item)}>
                 {item}
               </Button>
             ))}

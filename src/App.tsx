@@ -1,5 +1,5 @@
 import React, { useState } from 'react';import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import NavBar from './components/Navbar';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <NavBar section={section} setSection={setSection}/>
-umm hello
+<div className="currentsection"> current section is {section}</div>
     </div>
   );
 }
