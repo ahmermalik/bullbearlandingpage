@@ -1,15 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/navbar';
+import NavBar from './components/Navbar';
 
 function App() {
-    const navlinks = ['Home','Purpose','Roadmap','How to buy' ,'About'];
+  const [section, setSection] = useState('');
 
   return (
     <div className="App">
-      <NavBar items={navlinks} />
-
+      <NavBar section={section} setSection={setSection}/>
+umm hello
     </div>
   );
 }
