@@ -3,7 +3,7 @@ import './App.scss';
 import NavBar from './components/Navbar';
 
 function App() {
-  const [section, setSection] = useState('');
+  const [section, setSection] = useState('Home');
 
   return (
     <div className="App">
