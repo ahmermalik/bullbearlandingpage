@@ -7,9 +7,11 @@ function App() {
   const [section, setSection] = useState("Home");
 
   return (
-    <div className="App">
+    <div className="app">
+      
       <NavBar section={section} setSection={setSection} />
-      <section className="home currentsection">
+      <div className="main-content">
+      <section className="home">
         {" "}
         current section is home
       </section>
@@ -25,6 +27,7 @@ function App() {
         {" "}
         current section is roadmap
       </section>
+      </div>
     </div>
   );
 }

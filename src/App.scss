@@ -1,4 +1,4 @@
-.App {
+.app {
   html {
   scroll-behavior: smooth;
 }
@@ -6,9 +6,8 @@
     width: 100%;     /* Full width */
     height: 100vh;   /* Full viewport height */
   }
-
-  .currentsection{
+  .main-content{
     margin-top: 150px;
-    text-align: center;
+    margin-left: 5px;
   }
 }
