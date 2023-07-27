@@ -9,6 +9,10 @@ function App() {
     <div className="App">
       <NavBar section={section} setSection={setSection}/>
 <div className="currentsection"> current section is {section}</div>
+<section>
+  hello
+  
+</section>
     </div>
   );
 }
