@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
+import { Link } from 'react-scroll';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
@@ -41,9 +42,11 @@ export default function Navbar(props: Props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
+             <Link to={item.toLowerCase()} smooth={true} key={item}>
             <ListItemButton sx={{ textAlign: 'center' }}>
-              <ListItemText primary={item} onClick={() => props.setSection(item)}/>
+              <ListItemText primary={item} onClick={() =>  props.setSection(item)}/>
             </ListItemButton>
+            </Link>
           </ListItem>
         ))}
       </List>
@@ -75,9 +78,11 @@ export default function Navbar(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }} onClick={() => props.setSection(item)}>
+                <Link to={item.toLowerCase()} smooth={true} key={item}>
+              <Button key={item} sx={{ color: '#fff' }} onClick={() =>  props.setSection(item)}>
                 {item}
               </Button>
+              </Link>
             ))}
           </Box>
          <Button> {'twitter'}</Button>

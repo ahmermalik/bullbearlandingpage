@@ -1,5 +1,11 @@
 .App {
-
+  html {
+  scroll-behavior: smooth;
+}
+  section{
+    width: 100%;     /* Full width */
+    height: 100vh;   /* Full viewport height */
+  }
 
   .currentsection{
     margin-top: 150px;
