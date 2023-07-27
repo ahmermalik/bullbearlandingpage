@@ -9,19 +9,19 @@ function App() {
   return (
     <div className="App">
       <NavBar section={section} setSection={setSection} />
-      <section className="landing currentsection">
+      <section className="home currentsection">
         {" "}
         current section is {section}
       </section>
-      <section className="about currentsection">
+      <section className="about">
         {" "}
         current section is {section}
       </section>
-      <section className="why currentsection">
+      <section className="why">
         {" "}
         current section is {section}
       </section>
-      <section className="roadmap currentsection">
+      <section className="roadmap">
         {" "}
         current section is {section}
       </section>
