@@ -1,13 +1,26 @@
 .app {
   html {
-  scroll-behavior: smooth;
-}
-  section{
-    width: 100%;     /* Full width */
-    height: 100vh;   /* Full viewport height */
+    scroll-behavior: smooth;
   }
-  .main-content{
-    margin-top: 150px;
-    margin-left: 5px;
+  section {
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+  }
+  .main-content {
+
+    .home {
+      .supper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+        .supper-img {
+          width: 100%; // Adjust as necessary
+          height: auto; // Keeps the aspect ratio of the image
+          padding-left: 10%;
+          padding-right: 10%;
+        }
+      }
+    }
   }
 }
