@@ -15,6 +15,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import SvgIcon from '@mui/material/SvgIcon';
+import logo from '../images/buddies/nobg/nbg3.png'
 
 interface Props {
   section: string;
@@ -69,24 +70,25 @@ export default function Navbar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
+          <img src={logo} alt="Logo" style={{ maxHeight: '40px', marginRight: '10px' }} /> 
           <Typography
             variant="h6"
             component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
+            sx={{  fontWeight: 'bold', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          >   
             Bull Bear Buddies
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
                 <Link to={item.toLowerCase()} smooth={true} key={item}>
-              <Button color="inherit" key={item} sx={{ color: '#fgf444' }} onClick={() =>  props.setSection(item)}>
+              <Button  key={item} sx={{ color:"inherit", fontWeight: 'bold'}} onClick={() =>  props.setSection(item)}>
                 {item}
               </Button>
               </Link>
             ))}
           </Box>
-         <Button color="inherit"> {'twitter'}</Button>
-         <Button color="inherit"> {'discord'}</Button>
+         <Button sx={{ color:"inherit", fontWeight: 'bold'}}> {'twitter'}</Button>
+         <Button sx={{ color:"inherit", fontWeight: 'bold'}}> {'discord'}</Button>
       
         </Toolbar>
       </AppBar>

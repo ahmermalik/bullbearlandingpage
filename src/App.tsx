@@ -94,10 +94,10 @@ function App() {
             </Grid>
           </Grid>
         </section>
-        <section className="about"> current section is about</section>
+        <section className="about"> </section>
         <section className="why">
           {" "}
-          current section is why BBB will help you
+         
         </section>
         <section className="roadmap"> current section is roadmap</section>
       </div>
