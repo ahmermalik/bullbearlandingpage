@@ -58,7 +58,7 @@ export default function Navbar(props: Props) {
   return (
     <Box sx={{ display: 'flex' }} >
       <CssBaseline />
-      <AppBar component="nav" position="fixed" color="transparent">
+      <AppBar component="nav" position="fixed" color="default" sx={{ boxShadow: 'none', backgroundColor: '#ffffff'  }} >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -79,15 +79,15 @@ export default function Navbar(props: Props) {
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
                 <Link to={item.toLowerCase()} smooth={true} key={item}>
-              <Button key={item} sx={{ color: '#fgf444' }} onClick={() =>  props.setSection(item)}>
+              <Button color="inherit" key={item} sx={{ color: '#fgf444' }} onClick={() =>  props.setSection(item)}>
                 {item}
               </Button>
               </Link>
             ))}
           </Box>
-         <Button> {'twitter'}</Button>
-         <Button> {'discord'}</Button>
-         <Button> {'discord'}</Button>
+         <Button color="inherit"> {'twitter'}</Button>
+         <Button color="inherit"> {'discord'}</Button>
+      
         </Toolbar>
       </AppBar>
       <Box component="nav">

@@ -10,16 +10,31 @@
   .main-content {
     .home {
       .hero {
+        .hero-text{
+
+        }
         .welcome-hero {
+          margin: 10px;
           .supper-img {
             height: auto;
             width: 100%;
             border-radius: 50%;
+            background: #FFFFFF;
+            /* Set the width of your border */
+            // box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 1);
+            box-shadow: 0 0 10px 10px rgba(164, 203, 216, 0.517);
+          }
+        }
+        .bbb-is{
+          text-align: center;
+          .bbb-descrip{
+            color: grey
           }
         }
 
         .hero-text {
           text-align: center;
+          margin-top: 70px;
         }
       }
 
@@ -28,13 +43,14 @@
         justify-content: center;
         align-items: center;
 
-        .buddy-img {
+        .animol {
           width: 100%; // Adjust as necessary
           height: auto; // Keeps the aspect ratio of the image
           padding-left: 5%;
           padding-right: 5%;
           border-radius: 50%;
           margin-top: 10px;
+          
         }
       }
     }
