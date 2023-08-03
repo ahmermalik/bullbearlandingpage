@@ -69,11 +69,6 @@ function App() {
               {" "}
               <img className="supper-img" src={supper} alt="Logo" />{" "}
             </span>
-            {/* <h1 className="hero-text">
-              {" "}
-              {`"The strength of the team is each individual member. The strength of each member is the team." - Phil Jackson`}
-            </h1> */}
-
           </div>
           <div> <Quote/> </div>
           
