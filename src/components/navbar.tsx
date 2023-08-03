@@ -14,9 +14,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-import SvgIcon from '@mui/material/SvgIcon';
 import logol from '../images/buddies/nobg/nbg3.png'
 import logor from '../images/buddies/nobg/nbg10.png'
+import shake from '../images/shake/shakepixel.png'
 
 interface Props {
   section: string;

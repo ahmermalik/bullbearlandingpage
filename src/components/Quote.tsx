@@ -1,4 +1,3 @@
-// Quote.js
 import React from 'react';
 import './Quote.scss';
 

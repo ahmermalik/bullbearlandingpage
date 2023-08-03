@@ -7,6 +7,7 @@ import bull from "./images/bull/rightnbg.png";
 import supper from "./images/lastsupper/finalcut.png";
 import bear from "./images/bear/bearleftnbg.png"
 import Quote from "./components/Quote";
+import Roadmap from "./components/Roadmap";
 
 function App() {
   const [section, setSection] = useState("Home");
@@ -65,6 +66,7 @@ function App() {
 
           </div>
           <div> <Quote/> </div>
+          
           <Grid container spacing={2}>
             <Grid item md={3}>
               <div className="welcome-home">
@@ -98,12 +100,15 @@ function App() {
             </Grid>
           </Grid>
         </section>
+       
+
         <section className="about"> </section>
+        <section className="roadmap"> <Roadmap/></section>
         <section className="why">
           {" "}
          
         </section>
-        <section className="roadmap"> current section is roadmap</section>
+ 
       </div>
     </div>
   );
