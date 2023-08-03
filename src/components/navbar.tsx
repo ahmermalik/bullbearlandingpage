@@ -15,7 +15,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import SvgIcon from '@mui/material/SvgIcon';
-import logo from '../images/buddies/nobg/nbg3.png'
+import logol from '../images/buddies/nobg/nbg3.png'
+import logor from '../images/buddies/nobg/nbg10.png'
 
 interface Props {
   section: string;
@@ -37,8 +38,10 @@ export default function Navbar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Bull Bear Buddies
+      <img src={logol} alt="Logo" style={{ maxHeight: '40px', marginRight: '10px' }} /> 
+      <img src={logor} alt="Logo" style={{ maxHeight: '40px', marginRight: '10px' }} /> 
       </Typography>
+      
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -70,7 +73,7 @@ export default function Navbar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-          <img src={logo} alt="Logo" style={{ maxHeight: '40px', marginRight: '10px' }} /> 
+          <img src={logol} alt="Logo" style={{ maxHeight: '40px', marginRight: '10px' }} /> 
           <Typography
             variant="h6"
             component="div"
@@ -78,6 +81,7 @@ export default function Navbar(props: Props) {
           >   
             Bull Bear Buddies
           </Typography>
+          <img src={logor} alt="Logo" style={{ maxHeight: '40px', marginRight: '10px' }} />
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
                 <Link to={item.toLowerCase()} smooth={true} key={item}>
