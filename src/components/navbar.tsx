@@ -17,7 +17,7 @@ import Button from '@mui/material/Button';
 import logol from '../images/buddies/nobg/nbg3.png'
 import logor from '../images/buddies/nobg/nbg10.png'
 import shake from '../images/shake/shakepixel.png'
-
+//test
 interface Props {
   section: string;
   setSection: React.Dispatch<React.SetStateAction<string>>;
