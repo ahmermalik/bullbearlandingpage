@@ -23,7 +23,7 @@ export default function Roadmap() {
         {roadmapData.map((item, index) => (
           <React.Fragment key={index}>
             <div className={styles.phase}>
-              <Card className={styles.card} sx={{ boxShadow: 'none', border: 'none' }}>
+              <Card className={styles.card} sx={{ boxShadow: '0 0 10px 3px lime', border: 'none' }}>
                 <CardContent>
                   <Typography variant="h5" component="div">
                     Phase {item.phase}: {item.title}

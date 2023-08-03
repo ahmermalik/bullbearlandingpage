@@ -75,6 +75,7 @@ export default function Navbar(props: Props) {
           </IconButton>
           <img src={logol} alt="Logo" style={{ maxHeight: '40px', marginRight: '10px' }} /> 
           <Typography
+          color="lime"
             variant="h6"
             component="div"
             sx={{  fontWeight: 'bold', flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
@@ -85,14 +86,14 @@ export default function Navbar(props: Props) {
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
                 <Link to={item.toLowerCase()} smooth={true} key={item}>
-              <Button  key={item} sx={{ color:"inherit", fontWeight: 'bold'}} onClick={() =>  props.setSection(item)}>
+              <Button  key={item} sx={{ color:"lime", fontWeight: 'bold'}} onClick={() =>  props.setSection(item)}>
                 {item}
               </Button>
               </Link>
             ))}
           </Box>
-         <Button sx={{ color:"inherit", fontWeight: 'bold'}}> {'twitter'}</Button>
-         <Button sx={{ color:"inherit", fontWeight: 'bold'}}> {'discord'}</Button>
+         <Button component="a" href="https://twitter.com/BullBear_erc20" target="_blank" rel="noopener noreferrer"sx={{ color:"inherit", fontWeight: 'bold'}}> {'twitter'}</Button>
+         <Button component="a" href="https://discord.gg/P8X35prGKX" target="_blank" rel="noopener noreferrer" sx={{ color:"inherit", fontWeight: 'bold'}}> {'discord'}</Button>
       
         </Toolbar>
       </AppBar>
