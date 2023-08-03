@@ -8,6 +8,15 @@ import supper from "./images/lastsupper/finalcut.png";
 import bear from "./images/bear/bearleftnbg.png"
 import Quote from "./components/Quote";
 import Roadmap from "./components/Roadmap";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+
+const theme = createTheme({
+  typography: {
+    fontFamily: '"Poppins", sans-serif',
+  },
+});
+
 
 function App() {
   const [section, setSection] = useState("Home");
@@ -45,6 +54,7 @@ function App() {
   }, [words]);
 
   return (
+    <ThemeProvider theme={theme}>
     <div className="app">
       <span className="nav-bar">
         {" "}
@@ -111,6 +121,7 @@ function App() {
  
       </div>
     </div>
+    </ThemeProvider>
   );
 }
 
