@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import bull from "./images/bull/rightnbg.png";
 import supper from "./images/lastsupper/finalcut.png";
 import bear from "./images/bear/bearleftnbg.png"
+import Quote from "./components/Quote";
 
 function App() {
   const [section, setSection] = useState("Home");
@@ -52,20 +53,18 @@ function App() {
       <div className="main-content">
         <section className="home">
           <div className="hero">
-            <h1 className="hero-text">
-              {" "}
-              {`"The strength of the team is each individual member. The strength of each member is the team." - Phil Jackson`}
-            </h1>
+           
             <span className="welcome-hero">
               {" "}
               <img className="supper-img" src={supper} alt="Logo" />{" "}
             </span>
+            {/* <h1 className="hero-text">
+              {" "}
+              {`"The strength of the team is each individual member. The strength of each member is the team." - Phil Jackson`}
+            </h1> */}
 
-            <h1 className="bbb-is">
-              Bull Bear Buddy is
-              <span className="bbb-descrip"> {words[currentWordIndex]}</span>
-            </h1>
           </div>
+          <div> <Quote/> </div>
           <Grid container spacing={2}>
             <Grid item md={3}>
               <div className="welcome-home">
@@ -74,6 +73,11 @@ function App() {
               </div>
             </Grid>
             <Grid item md={6}>
+              <h3>What is this?</h3>
+            <h3 className="bbb-is">
+              Bull Bear Buddy is
+              <span className="bbb-descrip"> {words[currentWordIndex]}</span>
+            </h3>
               <h3 className="welcome-subheading">
                 Who is this community for?
               </h3>
