@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import { useState, useEffect } from "react";
 import "./App.scss";
 import NavBar from "./components/Navbar";
 import Grid from "@mui/material/Grid";
@@ -82,24 +81,10 @@ function App() {
               </div>
             </Grid>
             <Grid item md={6}>
-              <SectionTitle name="What is this?"/>
+              <SectionTitle name="Why waste hours on endless research?"/>
 
-              <Roadmap/>
-            {/* <h3 className="bbb-is">
-              Bull Bear Buddy is
-              <span className="bbb-descrip"> {words[currentWordIndex]}</span>
-            </h3>
-              <h3 className="welcome-subheading">
-                Who is this community for?
-              </h3>
-              <h1 className="welcome-title">
-                {" "}
-                Stop spending hours on manually checking your watch lists
-              </h1>
-              <h3 className="welcome-subheading">
-                {" "}
-                All-in-one TA tool to save you time
-              </h3> */}
+           
+
             </Grid>
             <Grid item md={3}>
               <div className="welcome-home">
@@ -112,10 +97,13 @@ function App() {
        
 
         <section className="about"> </section>
-        <section className="roadmap">
-<SectionTitle name="Road Map"/>
+        <section className="roadmap" >
+       
+<SectionTitle name="Roadmap & Features List"/>
 
-           <Roadmap/>
+        <div className="roadmap-content">
+        <Roadmap/>
+        </div>
            
            </section>
         <section className="why">
