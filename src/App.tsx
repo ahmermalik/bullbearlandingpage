@@ -9,6 +9,7 @@ import bear from "./images/bear/bearleftnbg.png"
 import Quote from "./components/Quote";
 import Roadmap from "./components/Roadmap";
 import { ThemeProvider, createTheme } from '@mui/material/styles';
+import SectionTitle from "./components/SectionTitle";
 
 
 const theme = createTheme({
@@ -63,6 +64,7 @@ function App() {
 
       <div className="main-content">
         <section className="home">
+
           <div className="hero">
            
             <span className="welcome-hero">
@@ -80,7 +82,8 @@ function App() {
               </div>
             </Grid>
             <Grid item md={6}>
-              <h3>What is this?</h3>
+              <SectionTitle name="What is this?"/>
+
             <h3 className="bbb-is">
               Bull Bear Buddy is
               <span className="bbb-descrip"> {words[currentWordIndex]}</span>
@@ -108,8 +111,15 @@ function App() {
        
 
         <section className="about"> </section>
-        <section className="roadmap"> <Roadmap/></section>
+        <section className="roadmap">
+<SectionTitle name="Road Map"/>
+
+           <Roadmap/>
+           
+           </section>
         <section className="why">
+        <SectionTitle name="Why"/>
+
           {" "}
          
         </section>

@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import styles from './Roadmap.module.scss'; // import the styles
 import shake from "../images/shake/shakepixel.png"
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Grid from '@mui/material/Grid';
 
 
 const roadmapData = [
@@ -19,24 +20,22 @@ const roadmapData = [
 
 export default function Roadmap() {
     return (
-      <div className={styles.roadmap}>
+        <Grid container spacing={5} className={styles.roadmap}>
         {roadmapData.map((item, index) => (
-          <React.Fragment key={index}>
-            <div className={styles.phase}>
-              <Card className={styles.card} sx={{ boxShadow: '0 0 10px 3px lime', border: 'none' }}>
-                <CardContent>
-                  <Typography variant="h5" component="div">
-                    Phase {item.phase}: {item.title}
-                  </Typography>
-                  <Typography variant="body2">
-                    {item.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </div>
-            {index !== roadmapData.length - 1 && <img className={styles.betweenCardImage} src={shake} alt="handshake" />}
-          </React.Fragment>
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <Card className={styles.card} sx={{ boxShadow: '0 0 10px 3px lime', border: 'none' }}>
+              <CardContent>
+                <Typography variant="h5" component="div">
+                  Phase {item.phase}: {item.title}
+                </Typography>
+                <Typography variant="body2">
+                  {item.description}
+                </Typography>
+              </CardContent>
+            </Card>
+            {/* {index !== roadmapData.length - 1 && <img className={styles.betweenCardImage} src={shake} alt="handshake" />} */}
+          </Grid>
         ))}
-      </div>
+      </Grid>
     );
 }

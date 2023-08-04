@@ -82,7 +82,7 @@ export default function Navbar(props: Props) {
           >   
             Bull Bear Buddies
           </Typography>
-          <img src={logor} alt="Logo" style={{ maxHeight: '40px', marginRight: '10px' }} />
+          <img src={logor} alt="Logo" style={{ maxHeight: '40px', marginRight: '10px'  }} />
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
                 <Link to={item.toLowerCase()} smooth={true} key={item}>

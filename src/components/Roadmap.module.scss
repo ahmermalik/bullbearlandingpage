@@ -1,35 +1,6 @@
-.roadmap {
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px; 
-  
-}
-
-.phase {
-  flex-basis: calc((100% - 100px) / 6); /* 100px is for the image */
-  /* Adjust '6' to the number of cards you want to display per row on larger screens,
-  and adjust '20px' to your desired spacing between cards */
-  
-}
-
-@media (max-width: 768px) { 
-  /* Adjust '768px' to the point where you want the layout to change for smaller screens */
-  .phase {
-    flex-basis: 100%; 
+.card {
+  transition: transform .2s; /* Animation */
+  &:hover {
+    transform: translateY(-10px); /* Move up by 10px */
   }
 }
-
-.betweenCardImage {
-  width: 100px;
-  height: auto;
-  margin: 0 5px;
-
-  @media (max-width: 770px) {
-    transform: rotate(90deg);
-  }
-
-}
-
-//rgb(137, 248, 139)

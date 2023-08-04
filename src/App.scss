@@ -9,9 +9,9 @@
   section {
     width: 100%; /* Full width */
     height: 100vh; /* Full viewport height */
+    margin-top: 75px
   }
   .main-content {
-    margin-top:55px;
     .home {
       .hero {
         .hero-text{
@@ -26,7 +26,8 @@
             background: #FFFFFF;
             /* Set the width of your border */
             // box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 1);
-            box-shadow: 0 0 10px 10px rgba(164, 203, 216, 0.517);
+            box-shadow: 0 0 10px 10px rgb(205, 255, 205);
+            boxShadow: '0px 0px 10px 5px lime'
           }
         }
         .bbb-is{
