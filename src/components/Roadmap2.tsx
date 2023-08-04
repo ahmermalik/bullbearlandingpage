@@ -12,17 +12,17 @@ import win from "../images/success.png";
 const roadmapData = [
   {
     phase: 1,
-    title: "Analytics Platform",
+    title: "Conceptualization",
     img: win,
     description:
-      "Fastest Analytics to optimize how you spend time discovering new Coins and NFTs",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
   },
   {
     phase: 2,
-    title: "Analytics Platform",
+    title: "New Features",
     img: win,
     description:
-      "Fastest Analytics to optimize how you spend time discovering new Coins and NFTs",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
   },
   {
     phase: 3,

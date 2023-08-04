@@ -84,7 +84,8 @@ function App() {
             <Grid item md={6}>
               <SectionTitle name="What is this?"/>
 
-            <h3 className="bbb-is">
+              <Roadmap/>
+            {/* <h3 className="bbb-is">
               Bull Bear Buddy is
               <span className="bbb-descrip"> {words[currentWordIndex]}</span>
             </h3>
@@ -98,7 +99,7 @@ function App() {
               <h3 className="welcome-subheading">
                 {" "}
                 All-in-one TA tool to save you time
-              </h3>
+              </h3> */}
             </Grid>
             <Grid item md={3}>
               <div className="welcome-home">
