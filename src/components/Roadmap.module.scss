@@ -1,20 +1,29 @@
 .checklistCards {
 
-  .card {
-    width: 100%; // Add this line
-    max-width: 345px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 3px;
-    border: 2px solid rgb(239, 193, 119);
+  .gridAlign{
+    display: flex;
+    justify-content: center;
 
-
-    .cardContent {
-      .task {
-        display: flex;
-        align-items: center;
-        margin-bottom: 18px;
+    .card {
+      width: 100%; // Add this line
+      flex-direction: column; // Add this line
+      max-width: 345px;
+      
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 3px;
+      border: 2px solid rgb(239, 193, 119);
+  
+  
+      .cardContent {
+        .task {
+          display: flex;
+          align-items: center;
+          margin-bottom: 18px;
+        }
       }
     }
+
   }
+
 }

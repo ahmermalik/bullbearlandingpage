@@ -45,13 +45,21 @@ const checklistData = [
       "Token Holder Exclusive Utilities",
     ],
   },
+  {
+    title: "Phase V",
+    tasks: [
+      "Monthly Subscription Model Launch",
+      "Buy Back and Burn Program",
+      "Continue Evolving Product!",
+    ],
+  },
 ];
 
 export default function ChecklistCards() {
   return (
     <Grid container spacing={2} className={styles.checklistCards}>
       {checklistData.map((checklist, index) => (
-        <Grid item xs={12} sm={6} md={4} lg={3} key={index} style={{display: 'flex'}}>
+        <Grid item xs={12} sm={6} md={4} lg={3} key={index} className={styles.gridAlign}>
           <Card key={index} className={styles.card}>
             <CardContent className={styles.cardContent}>
               <Typography gutterBottom variant="h5" component="div">
