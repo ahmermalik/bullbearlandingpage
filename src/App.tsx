@@ -145,10 +145,11 @@ function App() {
                     variant="contained"
                     sx={{
                       color: "#0E9296",
-                      background: "linear-gradient(160deg, #33A38C, #ABB13F)",
-                      border: "2px solid transparent",
+                      background: "linear-gradient(200deg, #33A38C, #ABB13F)",
+                      border: "1px solid transparent",
                       position: "relative",
                       overflow: "hidden",
+                      height: 48,
                       zIndex: 0,
                       "&::before": {
                         content: '""',
@@ -162,7 +163,7 @@ function App() {
                         margin: "-2px",
                         border: 0,
                         borderRadius: 3,
-                        height: 48,
+        
                         padding: "0 30px",
                         transition: "0.4s",
                       }
@@ -175,7 +176,7 @@ function App() {
                     color="primary"
                     style={{ marginLeft: "10px" }}
                     sx={{
-                      background: "linear-gradient(90deg, #FCBB0B, #0F9FA3)",
+                      background: "linear-gradient(200deg, #FCBB0B, #0F9FA3)",
                       border: 0,
                       borderRadius: 3,
                       color: "white",
@@ -187,7 +188,7 @@ function App() {
                         // Reset on touch devices, it doesn't add specificity
                         "@media (hover: none)": {
                           backgroundColor:
-                            "linear-gradient(90deg, #FCBB0B, #0F9FA3)",
+                            "linear-gradient(30deg, #FCBB0B, #0F9FA3)",
                         },
                       },
                     }}
@@ -263,6 +264,9 @@ function App() {
           </section>
 
           <section className="about">
+          <br/>
+          <br/>
+            <br/>
             <SectionTitle name="About" />
             <Grid container spacing={3}>
               {data.map((item, index) => (
