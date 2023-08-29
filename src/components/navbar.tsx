@@ -132,7 +132,8 @@ export default function Navbar(props: Props) {
             rel="noopener noreferrer"
             variant="outlined"
             sx={{
-              mr: 2,  //
+              width: 93, 
+              mr: 2, //margin right
               fontWeight: "bold",
               borderColor: '#65B20A',
               color: '#65B20A',
@@ -151,6 +152,7 @@ export default function Navbar(props: Props) {
             target="_blank"
             rel="noopener noreferrer"
             sx={{
+              width: 93, 
               fontWeight: "bold",
               backgroundColor: '#65B20A',
               color: 'white',

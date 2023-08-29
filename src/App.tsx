@@ -150,6 +150,7 @@ function App() {
                       position: "relative",
                       overflow: "hidden",
                       height: 48,
+                      width: 145,
                       zIndex: 0,
                       "&::before": {
                         content: '""',
@@ -163,7 +164,6 @@ function App() {
                         margin: "-2px",
                         border: 0,
                         borderRadius: 3,
-        
                         padding: "0 30px",
                         transition: "0.4s",
                       }
@@ -181,6 +181,7 @@ function App() {
                       borderRadius: 3,
                       color: "white",
                       height: 48,
+                      width: 145,
                       padding: "0 30px",
                       transition: "0.4s",
                       "&:hover": {
@@ -256,7 +257,8 @@ function App() {
                 <Typography variant="h2">
                   Unleash Your Time: Say Goodbye to Endless Research
                 </Typography>
-                <Button variant="contained" color="primary" disabled>
+                <Button variant="contained" color="primary" disabled sx={{ height: 48,
+                      width: 135}}>
                   Launch dApp
                 </Button>
               </Grid>
