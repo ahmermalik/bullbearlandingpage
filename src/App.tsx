@@ -297,7 +297,7 @@ function App() {
             </Grid>
           </section>
           {/*About section below  */}
-          <section className="about">
+          <section className="about" >
             <br />
             <br />
             <br />

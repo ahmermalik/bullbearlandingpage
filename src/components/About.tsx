@@ -31,7 +31,14 @@ const data = [
 
 export default function About() {
   return (
-    <Grid container spacing={3} sx={{ display: "flex" }}>
+    <Grid
+      container
+      spacing={3}
+      sx={{
+        display: "flex",
+        justifyContent: "center"
+      }}
+    >
       {data.map((item, index) => (
         <Grid
           item
