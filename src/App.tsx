@@ -5,20 +5,29 @@ import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import bull from "./images/bull/rightnbg.png";
+import token from "./images/presale.png";
 import bear from "./images/bear/bearleftnbg.png";
 import Quote from "./components/Quote";
 import Roadmap from "./components/Roadmap";
+import About from "./components/About";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import SectionTitle from "./components/SectionTitle";
 import Button from "@mui/material/Button";
-import Card from "@mui/material/Card";
-import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
+
 import { styled } from "@mui/system";
 
 const theme = createTheme({
   typography: {
     fontFamily: '"Inter", sans-serif',
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        html: {
+          scrollBehavior: "smooth",
+        },
+      },
+    },
   },
 });
 
@@ -28,43 +37,6 @@ const HoverableImage = styled("img")({
     transform: "scale(1.1)",
   },
 });
-
-const StyledGridItem = styled(Grid)(({ theme }) => ({
-  backgroundColor: "#F8FAFC",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  height: "100%", // adjust based on your requirements
-  padding: theme.spacing(2),
-}));
-
-const StyledImage = styled("img")({
-  width: "100%",
-  height: "auto",
-  maxWidth: "300px", // adjust based on your requirements
-  display: "block",
-  marginLeft: "auto",
-  marginRight: "auto",
-});
-
-const data = [
-  {
-    title: "Technical Analysis",
-    image: "/path",
-    info: "the cornerstone of informed decision-making. Seamlessly automate complex analysis processes to enhance your trading precision, seize opportunities, and maximize gains. Join us in reshaping the future of trading through advanced technology.",
-  },
-  {
-    title: "Precision in Every Trade",
-    image: "/path",
-    info: "Embrace Automated Technical Analysis. Elevate your trading game with our pioneering solution. By seamlessly integrating Technical Analysis, you gain a strategic edge that enhances your decision-making. Welcome to a future where every trade is a step towards success, backed by cutting-edge technology.",
-  },
-  {
-    title: "Community Enrichment",
-    image: "/path",
-    info: "Join a vibrant community where knowledge thrives and growth is nurtured. Our innovative solution, driven by automated Technical Analysis, fosters a space for like-minded individuals to learn, develop, and flourish together. Elevate your trading strategies while connecting with peers who share your aspirations.",
-  },
-];
 
 function App() {
   const [section, setSection] = useState("Home");
@@ -114,7 +86,7 @@ function App() {
             <div className="hero">
               <span className="welcome-hero"> </span>
             </div>
-            <Grid container spacing={3}>
+            <Grid container spacing={3} sx={{ marginBottom: "100px" }}  alignItems="center">
               {/* Grid item 1 */}
               <Grid
                 item
@@ -122,8 +94,8 @@ function App() {
                 md={6}
                 container
                 direction="column"
-                justifyContent="center"
-                alignItems="center"
+                justifyContent="flex-start"
+                
               >
                 <Typography
                   variant="h2"
@@ -136,21 +108,37 @@ function App() {
                       lg: "2.5rem", // for screens 1200px and up
                       xl: "3rem", // for screens 1536px and up
                     },
+                    marginBottom: "15px",
                   }}
                 >
-                  Amplify Your Impact in the <span> Digital Economy</span>
+                  Amplify Your Impact in the{" "}
+                  <span style={{ color: "#FCBB0B" }}>Digital Economy</span>
                 </Typography>
 
-                <Typography variant="body1" component="p">
-                  Welcome to our Token Holder website, where cutting-edge
-                  technology scours the blockchain in real-time to uncover the
-                  most promising launches. Experience a new dimension of
-                  investing, where trading profits are effortlessly distributed
-                  among our community of investors. Join us and embrace a future
-                  where your tokens hold the key to unparalleled success.
+                <Typography
+                  variant="body1"
+                  component="p"
+                  sx={{
+                    marginBottom: "15px",
+                    marginTop: "15px", // Added top margin for separation
+                    lineHeight: 1.6, // Increased line height for better readability
+                    color: "#333", // Darkened the text for better contrast (optional based on background)
+                    "& strong": {
+                      // Emphasize key points using bold
+                      fontWeight: "bold",
+                    },
+                  }}
+                >
+                  Welcome to our <strong>Token Holder website</strong>, where
+                  cutting-edge technology scours the blockchain in real-time to
+                  uncover the most promising launches. Experience a new
+                  dimension of investing, where trading profits are effortlessly
+                  distributed among our community of investors. Join us and
+                  embrace a future where your tokens hold the{" "}
+                  <strong>key to unparalleled success</strong>.
                 </Typography>
 
-                <span>
+                <span style={{ marginTop: "12px"}}>
                   {" "}
                   <Button
                     variant="contained"
@@ -164,6 +152,8 @@ function App() {
                       height: 48,
                       width: 145,
                       zIndex: 0,
+                      marginTop: "5px",
+                      marginBottom: "5px",
                       "&::before": {
                         content: '""',
                         position: "absolute",
@@ -173,7 +163,6 @@ function App() {
                         left: 0,
                         zIndex: -1,
                         background: "white",
-                        margin: "-2px",
                         border: 0,
                         borderRadius: 3,
                         padding: "0 30px",
@@ -239,23 +228,25 @@ function App() {
                   height="100%"
                 >
                   <HoverableImage
-                    src={bull}
-                    alt="description"
-                    style={{ width: "50%" }}
+                    src={token}
+                    alt="token-presale-image"
+                    style={{ width: "75%" }}
                   />
                 </Box>
               </Grid>
             </Grid>
+
+            {/*dApp area below  */}
             <Grid
               container
               spacing={3}
-              sx={{ 
-                backgroundColor: 'transparent', 
-                padding: 3, 
+              sx={{
+                backgroundColor: "transparent",
+                padding: 3,
                 borderRadius: 5,
-                border: '1px solid #FCBB0B',
-                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)'
-            }}
+                border: "1px solid #FCBB0B",
+                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+              }}
             >
               <Grid
                 item
@@ -305,44 +296,13 @@ function App() {
               </Grid>
             </Grid>
           </section>
-
+          {/*About section below  */}
           <section className="about">
             <br />
             <br />
             <br />
             <SectionTitle name="About" />
-            <Grid container spacing={3}>
-              {data.map((item, index) => (
-                <Grid item xs={12} sm={6} md={4} key={index}>
-                  <Card
-                    variant="outlined"
-                    sx={{
-                      height: "100%",
-                      transition: "0.3s",
-                      "&:hover": {
-                        boxShadow: "5px 5px 15px rgba(0,0,0,0.3)",
-                        transform: "scale(1.05)",
-                      },
-                    }}
-                  >
-                    <CardMedia
-                      component="img"
-                      height="140"
-                      image={item.image}
-                      alt={`Image for ${item.title}`}
-                    />
-                    <CardContent>
-                      <Typography variant="h5" component="div">
-                        {item.title}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {item.info}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
+            <About />
           </section>
           <section className="roadmap">
             <SectionTitle name="Roadmap & Features List" />

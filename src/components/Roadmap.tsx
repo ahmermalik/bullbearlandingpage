@@ -57,7 +57,7 @@ const checklistData = [
 
 export default function ChecklistCards() {
   return (
-    <Grid container spacing={2} sx={{ display: 'flex' }}>
+    <Grid container spacing={3} sx={{ display: 'flex' }}>
       {checklistData.map((checklist, index) => (
         <Grid
           item
@@ -75,6 +75,11 @@ export default function ChecklistCards() {
               backgroundColor: "transparent",
               borderRadius: 8,
               border: "1px solid #FCBB0B",
+              transition: ".3s",
+              "&:hover": {
+                boxShadow: "5px 5px 15px rgba(0,0,0,0.3)",
+                transform: "scale(1.05)",
+              },
             }}
           >
             <CardContent sx={{ padding: "16px 16px 0 0" }}>
