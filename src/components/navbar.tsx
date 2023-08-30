@@ -76,9 +76,36 @@ export default function Navbar(props: Props) {
       <CssBaseline />
       <AppBar
         component="nav"
-        position="fixed"
-        color="default"
-        sx={{ boxShadow: "none", backgroundColor: "#ffffff" }}
+        position="static"
+        sx={{ 
+        backgroundColor: 'transparent',  
+        boxShadow: "none",
+        paddingLeft: '250px',
+        paddingRight: '250px',
+        '@media (max-width: 1536px)': {  // for screens up to 600px wide
+          paddingLeft: '150px',
+          paddingRight: '150px',
+        },
+        '@media (max-width: 1200px)': {  // for screens up to 600px wide
+          paddingLeft: '125px',
+          paddingRight: '125px',
+        },
+        '@media (max-width: 900px)': {  // for screens up to 600px wide
+          paddingLeft: '100px',
+          paddingRight: '100px',
+        },
+        '@media (max-width: 650px)': {  // for screens up to 600px wide
+          paddingLeft: '75px',
+          paddingRight: '75px',
+        },
+        '@media (max-width: 450px)': {  // for screens up to 600px wide
+          paddingLeft: '25px',
+          paddingRight: '25px',
+        },
+
+
+
+       }}
       >
         <Toolbar>
           <IconButton
