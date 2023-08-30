@@ -18,7 +18,7 @@ import { styled } from "@mui/system";
 
 const theme = createTheme({
   typography: {
-    fontFamily: '"Poppins", sans-serif',
+    fontFamily: '"Inter", sans-serif',
   },
 });
 
@@ -89,7 +89,7 @@ function App() {
     // "trust worthy",
     // "dependable",
     "not giving you financial advice",
-  ]; // replace with your words
+  ];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   useEffect(() => {
@@ -126,7 +126,19 @@ function App() {
                 justifyContent="center"
                 alignItems="center"
               >
-                <Typography variant="h2">
+                <Typography
+                  variant="h2"
+                  sx={{
+                    fontWeight: "bold",
+                    fontSize: {
+                      xs: "1.25rem", // for screens 0px and up
+                      sm: "1.5rem", // for screens 600px and up
+                      md: "2rem", // for screens 900px and up
+                      lg: "2.5rem", // for screens 1200px and up
+                      xl: "3rem", // for screens 1536px and up
+                    }
+                  }}
+                >
                   Amplify Your Impact in the <span> Digital Economy</span>
                 </Typography>
 
@@ -144,6 +156,7 @@ function App() {
                   <Button
                     variant="contained"
                     sx={{
+                      borderRadius: 6, 
                       color: "#0E9296",
                       background: "linear-gradient(200deg, #33A38C, #ABB13F)",
                       border: "1px solid transparent",
@@ -166,7 +179,7 @@ function App() {
                         borderRadius: 3,
                         padding: "0 30px",
                         transition: "0.4s",
-                      }
+                      },
                     }}
                   >
                     Buy Token
@@ -178,14 +191,14 @@ function App() {
                     sx={{
                       background: "linear-gradient(200deg, #FCBB0B, #0F9FA3)",
                       border: 0,
-                      borderRadius: 3,
+                      borderRadius: 6,
                       color: "white",
                       height: 48,
                       width: 145,
                       padding: "0 30px",
                       transition: "0.4s",
                       "&:hover": {
-                        background: "linear-gradient(0deg, #FCBB0B, #0F9FA3)",
+                        background: "linear-gradient(50deg, #FCBB0B, #0F9FA3)",
                         // Reset on touch devices, it doesn't add specificity
                         "@media (hover: none)": {
                           backgroundColor:
@@ -227,7 +240,7 @@ function App() {
             <Grid
               container
               spacing={3}
-              sx={{ backgroundColor: "#F8FAFC", padding: 3 }}
+              sx={{ backgroundColor: "#F8FAFC", padding: 3, borderRadius: 5 }}
             >
               {/* Grid item 1 with image */}
               <Grid
@@ -254,11 +267,24 @@ function App() {
                 alignItems="center"
                 justifyContent="center"
               >
-                <Typography variant="h2">
+                <Typography variant="h2"                   sx={{
+                    fontWeight: "bold",
+                    fontSize: {
+                      xs: "1.25rem", // for screens 0px and up
+                      sm: "1.5rem", // for screens 600px and up
+                      md: "2rem", // for screens 900px and up
+                      lg: "2.5rem", // for screens 1200px and up
+                      xl: "3rem", // for screens 1536px and up
+                    }
+                  }}>
                   Unleash Your Time: Say Goodbye to Endless Research
                 </Typography>
-                <Button variant="contained" color="primary" disabled sx={{ height: 48,
-                      width: 135}}>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  disabled
+                  sx={{ height: 48, width: 135, borderRadius: 6 }}
+                >
                   Launch dApp
                 </Button>
               </Grid>
@@ -266,9 +292,9 @@ function App() {
           </section>
 
           <section className="about">
-          <br/>
-          <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
             <SectionTitle name="About" />
             <Grid container spacing={3}>
               {data.map((item, index) => (
