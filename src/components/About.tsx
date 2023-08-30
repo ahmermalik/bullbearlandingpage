@@ -15,7 +15,7 @@ const data = [
   {
     title: "Technical Analysis",
     image: tan,
-    info: "the cornerstone of informed decision-making. Seamlessly automate complex analysis processes to enhance your trading precision, seize opportunities, and maximize gains. Join us in reshaping the future of trading through advanced technology.",
+    info: "The cornerstone of informed decision-making. Seamlessly automate complex analysis processes to enhance your trading precision, seize opportunities, and maximize gains. Join us in reshaping the future of trading through advanced technology.",
   },
   {
     title: "Precision in Every Trade",
