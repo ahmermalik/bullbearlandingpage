@@ -8,19 +8,18 @@ interface SectionTitleProps {
 
 const SectionTitle: React.FC<SectionTitleProps> = ({ name }) => {
   return (
-    <Box 
-    sx={{ 
-      textAlign:'center',
-      bgcolor: 'white',
-      p: 2,
-      marginBottom: 2,
-    
-    }}
-    >
-      <Typography variant="h4" component="h2"  color= 'black' >
-        {name}
-      </Typography>
-    </Box>
+<Box 
+  sx={{ 
+    textAlign: 'center',
+    bgcolor: 'transparent',
+    p: 2,
+    marginBottom: 2,
+  }}
+>
+  <Typography variant="h4" component="h2" color='black'>
+    {name}
+  </Typography>
+</Box>
   );
 }
 

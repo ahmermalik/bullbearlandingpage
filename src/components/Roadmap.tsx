@@ -2,7 +2,7 @@ import React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
+import ShowChartRoundedIcon from '@mui/icons-material/ShowChartRounded';
 import styles from "./Roadmap.module.scss";
 import { Grid } from "@mui/material";
 
@@ -57,20 +57,57 @@ const checklistData = [
 
 export default function ChecklistCards() {
   return (
-    <Grid container spacing={2} className={styles.checklistCards}>
+    <Grid container spacing={2} sx={{ display: 'flex' }}>
       {checklistData.map((checklist, index) => (
-        <Grid item xs={12} sm={6} md={4} lg={3} key={index} className={styles.gridAlign}>
-          <Card key={index} className={styles.card}>
-            <CardContent className={styles.cardContent}>
-              <Typography gutterBottom variant="h5" component="div">
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={4}
+          lg={3}
+          key={index}
+          sx={{ display: 'flex' }} 
+        >
+          <Card
+            key={index}
+            sx={{
+              flex: 1,
+              backgroundColor: "transparent",
+              borderRadius: 8,
+              border: "1px solid #FCBB0B",
+            }}
+          >
+            <CardContent sx={{ padding: "16px 16px 0 0" }}>
+              <Typography
+                gutterBottom
+                variant="h5"
+                component="div"
+                sx={{
+                  backgroundColor: "#FCBB0B",
+                  paddingLeft: "16px",
+                  marginBottom: 2,
+                  borderTop: '1px solid #FCBB0B',    
+                  borderRight: '1px solid #FCBB0B',  
+                  borderBottom: '1px solid #FCBB0B',
+                  borderTopRightRadius: 15,     
+                  borderBottomRightRadius: 15,  
+                  maxWidth: '70%',  
+                }}
+              >
                 {checklist.title}
               </Typography>
               {checklist.tasks.map((task, i) => (
-                <Typography variant="body1" key={i} className={styles.task}>
-                  <div style={{ display: "flex", alignItems: "center" }}>
-                    <CheckCircleOutlineIcon
-                      color="primary"
-                      style={{ marginRight: "8px" }}
+                <Typography variant="body1" key={i}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      margin: "10px",
+                    }}
+                  >
+                    <ShowChartRoundedIcon
+                      color="action"
+                      style={{ color: "black", marginRight: "8px" }}
                     />
                     {task}
                   </div>

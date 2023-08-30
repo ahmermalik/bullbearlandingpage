@@ -114,7 +114,6 @@ function App() {
             <div className="hero">
               <span className="welcome-hero"> </span>
             </div>
-
             <Grid container spacing={3}>
               {/* Grid item 1 */}
               <Grid
@@ -136,7 +135,7 @@ function App() {
                       md: "2rem", // for screens 900px and up
                       lg: "2.5rem", // for screens 1200px and up
                       xl: "3rem", // for screens 1536px and up
-                    }
+                    },
                   }}
                 >
                   Amplify Your Impact in the <span> Digital Economy</span>
@@ -156,9 +155,9 @@ function App() {
                   <Button
                     variant="contained"
                     sx={{
-                      borderRadius: 6, 
+                      borderRadius: 6,
                       color: "#0E9296",
-                      background: "linear-gradient(200deg, #33A38C, #ABB13F)",
+                      background: "transparent",
                       border: "1px solid transparent",
                       position: "relative",
                       overflow: "hidden",
@@ -180,30 +179,43 @@ function App() {
                         padding: "0 30px",
                         transition: "0.4s",
                       },
+                      "&:hover": {
+                        background: "transparent", // This ensures the background remains transparent on hover.
+                      },
                     }}
                   >
                     Buy Token
                   </Button>
                   <Button
-                    variant="outlined"
-                    color="primary"
+                    variant="contained"
                     style={{ marginLeft: "10px" }}
                     sx={{
-                      background: "linear-gradient(200deg, #FCBB0B, #0F9FA3)",
-                      border: 0,
                       borderRadius: 6,
-                      color: "white",
+                      color: "#0E9296",
+                      background: "transparent",
+                      border: "1px solid transparent",
+                      position: "relative",
+                      overflow: "hidden",
                       height: 48,
                       width: 145,
-                      padding: "0 30px",
-                      transition: "0.4s",
+                      zIndex: 0,
+                      "&::before": {
+                        content: '""',
+                        position: "absolute",
+                        top: 0,
+                        right: 0,
+                        bottom: 0,
+                        left: 0,
+                        zIndex: -1,
+                        background: "white",
+                        margin: "-2px",
+                        border: 0,
+                        borderRadius: 3,
+                        padding: "0 30px",
+                        transition: "0.4s",
+                      },
                       "&:hover": {
-                        background: "linear-gradient(50deg, #FCBB0B, #0F9FA3)",
-                        // Reset on touch devices, it doesn't add specificity
-                        "@media (hover: none)": {
-                          backgroundColor:
-                            "linear-gradient(30deg, #FCBB0B, #0F9FA3)",
-                        },
+                        background: "transparent", // This ensures the background remains transparent on hover.
                       },
                     }}
                   >
@@ -211,8 +223,6 @@ function App() {
                   </Button>
                 </span>
               </Grid>
-
-              {/* Grid item 2 */}
               <Grid
                 item
                 xs={12}
@@ -236,13 +246,17 @@ function App() {
                 </Box>
               </Grid>
             </Grid>
-
             <Grid
               container
               spacing={3}
-              sx={{ backgroundColor: "#F8FAFC", padding: 3, borderRadius: 5 }}
+              sx={{ 
+                backgroundColor: 'transparent', 
+                padding: 3, 
+                borderRadius: 5,
+                border: '1px solid #FCBB0B',
+                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)'
+            }}
             >
-              {/* Grid item 1 with image */}
               <Grid
                 item
                 xs={12}
@@ -257,8 +271,6 @@ function App() {
                   style={{ width: "50%" }}
                 />
               </Grid>
-
-              {/* Grid item 2 with H2 and Button */}
               <Grid
                 item
                 xs={12}
@@ -267,7 +279,9 @@ function App() {
                 alignItems="center"
                 justifyContent="center"
               >
-                <Typography variant="h2"                   sx={{
+                <Typography
+                  variant="h2"
+                  sx={{
                     fontWeight: "bold",
                     fontSize: {
                       xs: "1.25rem", // for screens 0px and up
@@ -275,8 +289,9 @@ function App() {
                       md: "2rem", // for screens 900px and up
                       lg: "2.5rem", // for screens 1200px and up
                       xl: "3rem", // for screens 1536px and up
-                    }
-                  }}>
+                    },
+                  }}
+                >
                   Unleash Your Time: Say Goodbye to Endless Research
                 </Typography>
                 <Button
