@@ -16,7 +16,9 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import logol from "../images/buddies/nobg/nbg3.png";
 import logor from "../images/buddies/nobg/nbg10.png";
-import shake from "../images/shake/shakepixel.png";
+import TwitterIcon from "@mui/icons-material/Twitter";
+
+
 //test
 interface Props {
   section: string;
@@ -77,43 +79,46 @@ export default function Navbar(props: Props) {
       <AppBar
         component="nav"
         position="static"
-        sx={{ 
-        backgroundColor: 'transparent',  
-        boxShadow: "none",
-        paddingLeft: '250px',
-        paddingRight: '250px',
-        '@media (max-width: 1536px)': {  // for screens up to 600px wide
-          paddingLeft: '150px',
-          paddingRight: '150px',
-        },
-        '@media (max-width: 1200px)': {  // for screens up to 600px wide
-          paddingLeft: '125px',
-          paddingRight: '125px',
-        },
-        '@media (max-width: 900px)': {  // for screens up to 600px wide
-          paddingLeft: '100px',
-          paddingRight: '100px',
-        },
-        '@media (max-width: 650px)': {  // for screens up to 600px wide
-          paddingLeft: '75px',
-          paddingRight: '75px',
-        },
-        '@media (max-width: 450px)': {  // for screens up to 600px wide
-          paddingLeft: '25px',
-          paddingRight: '25px',
-        },
-
-
-
-       }}
+        sx={{
+          backgroundColor: "transparent",
+          boxShadow: "none",
+          paddingLeft: "250px",
+          paddingRight: "250px",
+          "@media (max-width: 1536px)": {
+            paddingLeft: "150px",
+            paddingRight: "150px",
+          },
+          "@media (max-width: 1200px)": {
+            paddingLeft: "125px",
+            paddingRight: "125px",
+          },
+          "@media (max-width: 900px)": {
+            paddingLeft: "100px",
+            paddingRight: "100px",
+          },
+          "@media (max-width: 650px)": {
+            paddingLeft: "75px",
+            paddingRight: "75px",
+          },
+          "@media (max-width: 450px)": {
+            paddingLeft: "25px",
+            paddingRight: "25px",
+          },
+        }}
       >
         <Toolbar>
           <IconButton
-            color="inherit"
+            color="primary"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
+            sx={{
+              mr: 2,
+              display: { sm: "none" },
+              "& svg": {
+                color: "#0F9FA3",
+              },
+            }}
           >
             <MenuIcon />
           </IconButton>
@@ -123,7 +128,7 @@ export default function Navbar(props: Props) {
             style={{ maxHeight: "40px", marginRight: "10px" }}
           />
           <Typography
-            color="#65B20A"
+            color="#0F9FA3"
             variant="h6"
             component="div"
             sx={{
@@ -144,7 +149,7 @@ export default function Navbar(props: Props) {
               <Link to={item.toLowerCase()} smooth={true} key={item}>
                 <Button
                   key={item}
-                  sx={{mr: 2, color: '#65B20A', fontWeight: "bold" }}
+                  sx={{ mr: 2, color: "#65B20A", fontWeight: "bold" }}
                   onClick={() => props.setSection(item)}
                 >
                   {item}
@@ -152,46 +157,15 @@ export default function Navbar(props: Props) {
               </Link>
             ))}
           </Box>
-          <Button
-            component="a"
+          <IconButton
+            color="info"
+            edge="end"
             href="https://twitter.com/bbx_erc20"
             target="_blank"
             rel="noopener noreferrer"
-            variant="outlined"
-            sx={{
-              width: 93, 
-              mr: 2, //margin right
-              fontWeight: "bold",
-              borderColor: '#65B20A',
-              color: '#65B20A',
-              background: 'transparent',
-              '&:hover': {
-                background: 'transparent', // To ensure the background remains transparent on hover
-              },
-            }}
           >
-            {" "}
-            {"twitter"}
-          </Button>
-          <Button
-            component="a"
-            href="https://discord.gg/P8X35prGKX"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{
-              width: 93, 
-              fontWeight: "bold",
-              backgroundColor: '#65B20A',
-              color: 'white',
-              
-              '&:hover': {
-                backgroundColor: '#4f8c06', // You can adjust this for a hover effect
-              },
-            }}
-          >
-            {" "}
-            {"discord"}
-          </Button>
+            <TwitterIcon />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Box component="nav">

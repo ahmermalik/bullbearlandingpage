@@ -4,10 +4,8 @@ import NavBar from "./components/Navbar";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import bull from "./images/bull/rightnbg.png";
 import token from "./images/presale.png";
-import bear from "./images/bear/bearleftnbg.png";
-import Quote from "./components/Quote";
+import ether from "./images/ether.png";
 import Roadmap from "./components/Roadmap";
 import About from "./components/About";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -86,7 +84,12 @@ function App() {
             <div className="hero">
               <span className="welcome-hero"> </span>
             </div>
-            <Grid container spacing={3} sx={{ marginBottom: "100px" }}  alignItems="center">
+            <Grid
+              container
+              spacing={3}
+              sx={{ marginBottom: "100px" }}
+              alignItems="center"
+            >
               {/* Grid item 1 */}
               <Grid
                 item
@@ -95,7 +98,6 @@ function App() {
                 container
                 direction="column"
                 justifyContent="flex-start"
-                
               >
                 <Typography
                   variant="h2"
@@ -138,13 +140,13 @@ function App() {
                   <strong>key to unparalleled success</strong>.
                 </Typography>
 
-                <span style={{ marginTop: "12px"}}>
+                <span style={{ marginTop: "12px" }}>
                   {" "}
                   <Button
                     variant="contained"
                     sx={{
                       borderRadius: 6,
-                      color: "#0E9296",
+                      color: "#65B20A",
                       background: "transparent",
                       border: "1px solid transparent",
                       position: "relative",
@@ -154,6 +156,7 @@ function App() {
                       zIndex: 0,
                       marginTop: "5px",
                       marginBottom: "5px",
+                      fontWeight: "bold",
                       "&::before": {
                         content: '""',
                         position: "absolute",
@@ -188,6 +191,7 @@ function App() {
                       height: 48,
                       width: 145,
                       zIndex: 0,
+                      fontWeight: "bold",
                       "&::before": {
                         content: '""',
                         position: "absolute",
@@ -244,7 +248,6 @@ function App() {
                 backgroundColor: "transparent",
                 padding: 3,
                 borderRadius: 5,
-                border: "1px solid #FCBB0B",
                 boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
               }}
             >
@@ -257,7 +260,7 @@ function App() {
                 justifyContent="center"
               >
                 <HoverableImage
-                  src={bear}
+                  src={ether}
                   alt="description"
                   style={{ width: "50%" }}
                 />
@@ -268,7 +271,7 @@ function App() {
                 md={6}
                 container
                 alignItems="center"
-                justifyContent="center"
+                justifyContent="flex-start" // Align to the left
               >
                 <Typography
                   variant="h2"
@@ -289,7 +292,7 @@ function App() {
                   variant="contained"
                   color="primary"
                   disabled
-                  sx={{ height: 48, width: 135, borderRadius: 6 }}
+                  sx={{ height: 48, width: 135, borderRadius: 6, marginTop: 2 }}
                 >
                   Launch dApp
                 </Button>
@@ -297,7 +300,7 @@ function App() {
             </Grid>
           </section>
           {/*About section below  */}
-          <section className="about" >
+          <section className="about">
             <br />
             <br />
             <br />
