@@ -26,7 +26,7 @@ interface Props {
 }
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Why", "Roadmap"];
+const navItems = ["Home", "About", "Roadmap", "Why"];
 
 export default function Navbar(props: Props) {
   const { window } = props;
@@ -148,13 +148,21 @@ export default function Navbar(props: Props) {
               <Link to={item.toLowerCase()} smooth={true} key={item}>
                 <Button
                   key={item}
+                  disableRipple
                   sx={{
                     mr: 2,
                     color: "#65B20A",
                     fontWeight: "bold",
                     "&:hover": {
-                      backgroundColor: "transparent", 
-                      transform: "none", 
+                      backgroundColor: "transparent",
+                    },
+                    "&:active": {
+                      backgroundColor: "transparent",
+                      boxShadow: "none",
+                    },
+                    "&:focus": {
+                      outline: "none",
+                      boxShadow: "none",
                     },
                   }}
                   onClick={() => props.setSection(item)}

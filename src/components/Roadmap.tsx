@@ -33,6 +33,7 @@ const checklistData = [
       "Telegram Notifications Beta",
       "Meta Alerts Launch",
       "Analyst Onboarding",
+      "Survey To Trade Launch"
     ],
   },
   {
