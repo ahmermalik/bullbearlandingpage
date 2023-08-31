@@ -3,7 +3,6 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import ShowChartRoundedIcon from '@mui/icons-material/ShowChartRounded';
-import styles from "./Roadmap.module.scss";
 import { Grid } from "@mui/material";
 
 const checklistData = [
@@ -22,7 +21,7 @@ const checklistData = [
     tasks: [
       "Token Launch",
       "Casanova I Launch - Coins",
-      "Summary Report Launch",
+      "Daily Summary Report Launch",
       "Discord Mods",
       "Community Building",
     ],
@@ -32,15 +31,15 @@ const checklistData = [
     tasks: [
       "Casanova II Launch - NFTs",
       "Telegram Notifications Beta",
-      "Meta Report Launch",
+      "Meta Alerts Launch",
       "Analyst Onboarding",
     ],
   },
   {
     title: "Phase IV",
     tasks: [
-      "Bot Aggregator I Launch",
-      "Gem Finder Aggregator Launch",
+      "Aggregator Bot I Launch",
+      "Gem Finder Launch",
       "Trading Strategy Course Launch",
       "Token Holder Exclusive Utilities",
     ],
@@ -48,10 +47,21 @@ const checklistData = [
   {
     title: "Phase V",
     tasks: [
+      "Casanova Guide Launch",
+      "Trade Finder Launch",
       "Monthly Subscription Model Launch",
-      "Buy Back and Burn Program",
-      "Continue Evolving Product!",
+      "Monthly Project Pitch",
+      "Casanova Onchain Launch",
     ],
+  },
+  {
+    title: "Phase VII",
+    tasks: [
+      "Token Holder Distribution Launch",
+      "Tokenomics Revamp For Profit Generation",
+      "Continue Adding Features To Casanova - Coin & NFT",
+      "Continue Evolving Product!",
+    ]
   },
 ];
 

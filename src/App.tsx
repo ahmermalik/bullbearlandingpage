@@ -11,6 +11,7 @@ import About from "./components/About";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import SectionTitle from "./components/SectionTitle";
 import Button from "@mui/material/Button";
+import Why from "./components/Why";
 
 import { styled } from "@mui/system";
 
@@ -176,7 +177,7 @@ function App() {
                       },
                     }}
                   >
-                    Buy Token
+                    Join Presale
                   </Button>
                   <Button
                     variant="contained"
@@ -316,6 +317,8 @@ function App() {
           </section>
           <section className="why">
             <SectionTitle name="Why" />{" "}
+
+            <Why/>
           </section>
         </div>
       </div>

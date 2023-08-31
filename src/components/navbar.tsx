@@ -18,7 +18,6 @@ import logol from "../images/buddies/nobg/nbg3.png";
 import logor from "../images/buddies/nobg/nbg10.png";
 import TwitterIcon from "@mui/icons-material/Twitter";
 
-
 //test
 interface Props {
   section: string;
@@ -149,7 +148,15 @@ export default function Navbar(props: Props) {
               <Link to={item.toLowerCase()} smooth={true} key={item}>
                 <Button
                   key={item}
-                  sx={{ mr: 2, color: "#65B20A", fontWeight: "bold" }}
+                  sx={{
+                    mr: 2,
+                    color: "#65B20A",
+                    fontWeight: "bold",
+                    "&:hover": {
+                      backgroundColor: "transparent", 
+                      transform: "none", 
+                    },
+                  }}
                   onClick={() => props.setSection(item)}
                 >
                   {item}
