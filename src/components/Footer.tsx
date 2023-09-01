@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import supabase from "../services/supabaseClient";
 
+
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -34,7 +35,7 @@ const Footer: React.FC = () => {
       }
 
     } else {
-      setEmailError("Please enter a valid email address");
+      setEmailError("Please enter a valid email address.");
     }
   };
 
@@ -65,7 +66,7 @@ const Footer: React.FC = () => {
             justifyContent="center"
           >
             {isSubmitted ? (
-              <span>Thank You, please check your email address for confirmation email.</span>
+              <span>Thank you. Please check your email address for a confirmation email.</span>
             ) : (
               <>
                 <span>

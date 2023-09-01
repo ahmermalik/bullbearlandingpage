@@ -19,6 +19,7 @@ import About from "./components/About";
 import SectionTitle from "./components/SectionTitle";
 import Why from "./components/Why";
 import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 // Local assets and styles
 import token from "./images/presale.png";
@@ -338,7 +339,7 @@ function App() {
             <Footer/>
             </section>
         </div>
-        <ScrollToTop smooth />
+        <ScrollToTopButton/>
       </div>
     </ThemeProvider>
   );
