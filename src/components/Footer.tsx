@@ -61,11 +61,9 @@ const Footer: React.FC = () => {
           <Typography>Copyright © 2023. All Rights Reserved.</Typography>
       </Grid>
 
-      {/* Subscription Section */}
       <Grid item xs={12} sm={6}>
         <Grid container direction="column" alignItems="flex-start" spacing={1}>
 
-          {/* Text: "Subscribe to Get Our Updates" */}
           <Grid item>
             <Typography
               variant="body2"
