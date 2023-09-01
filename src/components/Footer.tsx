@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
       }
 
     } else {
-      setEmailError("Please enter a valid email address.");
+      setEmailError("Enter a valid email address.");
     }
   };
 
