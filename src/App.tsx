@@ -1,20 +1,31 @@
+// React core
 import { useState, useEffect } from "react";
-import "./App.scss";
-import NavBar from "./components/Navbar";
-import Grid from "@mui/material/Grid";
+
+// MUI imports
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import token from "./images/presale.png";
-import ether from "./images/ether.png";
-import Roadmap from "./components/Roadmap";
-import About from "./components/About";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import SectionTitle from "./components/SectionTitle";
 import Button from "@mui/material/Button";
-import Why from "./components/Why";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { styled } from "@mui/system";
+
+// Third-party libraries
 import ScrollToTop from "react-scroll-to-top";
 
-import { styled } from "@mui/system";
+// Local component imports
+import NavBar from "./components/NavBar";
+import Roadmap from "./components/Roadmap";
+import About from "./components/About";
+import SectionTitle from "./components/SectionTitle";
+import Why from "./components/Why";
+import Footer from "./components/Footer";
+
+// Local assets and styles
+import token from "./images/presale.png";
+import ether from "./images/ether.png";
+import "./App.scss";
+
+
 
 const theme = createTheme({
   typography: {
@@ -323,6 +334,9 @@ function App() {
 
             <Why/>
           </section>
+          <section>
+            <Footer/>
+            </section>
         </div>
         <ScrollToTop smooth />
       </div>
