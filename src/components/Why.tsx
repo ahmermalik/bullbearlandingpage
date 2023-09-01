@@ -1,10 +1,11 @@
-import React from "react";
+import { useState } from 'react';
 import { Grid, Typography, Button } from "@mui/material";
 import winners from "../images/winners.png";
 import Box from "@mui/material/Box";
 import Quote from "./Quote";
-
 import { styled } from "@mui/system";
+import Proof from "./Proof";
+
 const HoverableImage = styled("img")({
   transition: "transform 0.3s ease-in-out",
   "&:hover": {
@@ -12,9 +13,10 @@ const HoverableImage = styled("img")({
   },
 });
 const Why = () => {
+    const [showToggleComponent, setShowToggleComponent] = useState(false);
   return (
     <div style={{ padding: "20px" }}>
-      <Grid container spacing={3} >
+      <Grid container spacing={3} style={{marginBottom:15}} >
         <Grid item xs={12} sm={6}>
           <Typography
             variant="h5"
@@ -73,6 +75,7 @@ const Why = () => {
               Join Presale
             </Button>
             <Button
+            onClick={() => setShowToggleComponent(!showToggleComponent)}
               variant="contained"
               style={{ marginLeft: "10px" }}
               sx={{
@@ -128,6 +131,8 @@ const Why = () => {
           </Box>
         </Grid>
       </Grid>
+
+     {showToggleComponent && <Proof/> }
     </div>
   );
 };

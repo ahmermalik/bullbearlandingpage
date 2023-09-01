@@ -12,6 +12,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import SectionTitle from "./components/SectionTitle";
 import Button from "@mui/material/Button";
 import Why from "./components/Why";
+import ScrollToTop from "react-scroll-to-top";
 
 import { styled } from "@mui/system";
 
@@ -36,6 +37,8 @@ const HoverableImage = styled("img")({
     transform: "scale(1.1)",
   },
 });
+
+
 
 function App() {
   const [section, setSection] = useState("Home");
@@ -321,6 +324,7 @@ function App() {
             <Why/>
           </section>
         </div>
+        <ScrollToTop smooth />
       </div>
     </ThemeProvider>
   );
