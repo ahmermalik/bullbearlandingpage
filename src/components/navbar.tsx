@@ -14,9 +14,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import logol from "../images/buddies/nobg/nbg3.png";
-import logor from "../images/buddies/nobg/nbg10.png";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import logo from "../images/logo.png";
 
 //test
 interface Props {
@@ -40,12 +39,7 @@ export default function Navbar(props: Props) {
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
         <img
-          src={logol}
-          alt="Logo"
-          style={{ maxHeight: "40px", marginRight: "10px" }}
-        />
-        <img
-          src={logor}
+          src={logo}
           alt="Logo"
           style={{ maxHeight: "40px", marginRight: "10px" }}
         />
@@ -122,7 +116,7 @@ export default function Navbar(props: Props) {
             <MenuIcon />
           </IconButton>
           <img
-            src={logol}
+            src={logo}
             alt="Logo"
             style={{ maxHeight: "40px", marginRight: "10px" }}
           />
@@ -138,11 +132,6 @@ export default function Navbar(props: Props) {
           >
             Bull Bear Buddies
           </Typography>
-          <img
-            src={logor}
-            alt="Logo"
-            style={{ maxHeight: "40px", marginRight: "10px" }}
-          />
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Link to={item.toLowerCase()} smooth={true} key={item}>

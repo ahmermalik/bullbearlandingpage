@@ -45,111 +45,113 @@ const Footer: React.FC = () => {
 
   return (
 
-
-<Grid container spacing={2} direction="row" alignItems="center" bgcolor="transparent" style={{ width: '100%', padding: '20px 0' }}>
-  
-  {/* Logo and Title */}
-  <Grid item xs={12} sm={6}>
-    <Box
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-    >
-      <img src={logo} alt="Bull Bear Logo" height="60" />
-      <Typography sx={{fontWeight: "bold"}} style={{ marginLeft: 8, fontSize: '20px' }}>Bull Bear Buddies</Typography>
-    </Box>
-  </Grid>
-
-  {/* Subscription Section */}
-  <Grid item xs={12} sm={6}>
-    <Grid container direction="column" alignItems="flex-start" spacing={1}>
+<Grid container spacing={2} direction="row" alignItems="flex-start" bgcolor="transparent" style={{ width: '100%', padding: '20px 0' }}>
       
-      {/* Text: "Subscribe to Get Our Updates" */}
-      <Grid item>
-        <Typography
-          variant="body2"
-          component="p"
-          sx={{
-            fontWeight: "bold",
-            fontSize: {
-              xs: ".75rem",
-              sm: ".75rem",
-              md: ".75rem",
-              lg: "1rem",
-              xl: "1rem",
-            },
-            marginBottom: "15px",
-          }}
-        >
-          Subscribe to Get Our Updates
-        </Typography>
+      <Grid item xs={12} sm={6} style={{ minHeight: '100px' }}> 
+          {/* minHeight is just an example value, adjust as needed */}
+          <Box
+            display="flex"
+            alignItems="center"
+            justifyContent="left"
+          >
+            <img src={logo} alt="Bull Bear Logo" height="60" />
+            <Typography sx={{ fontWeight: "bold" }} style={{ marginLeft: 8, fontSize: '20px' }}>Bull Bear Buddies</Typography>
+           
+          </Box>
+          <Typography>Copyright © 2023. All Rights Reserved.</Typography>
       </Grid>
 
-      {isSubmitted ? (
-        <Grid item>
-          Thank you. Please check your email address for a confirmation email.
-        </Grid>
-      ) : (
-        <Grid container item alignItems="center" spacing={1}>
-          
-          {/* Email TextField */}
+      {/* Subscription Section */}
+      <Grid item xs={12} sm={6}>
+        <Grid container direction="column" alignItems="flex-start" spacing={1}>
+
+          {/* Text: "Subscribe to Get Our Updates" */}
           <Grid item>
-          <TextField
-                    type="email"
-                    variant="outlined"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    error={!!emailError}
-                   helperText={emailError || " "}
-                    style={{ width: '200px', marginRight: 8, backgroundColor: 'transparent' }}
-                    sx={{
-                      '& fieldset': {
-                        borderRadius: '25px'
-                      }
-                    }}
-                  />
-                  <Button variant="contained" color="primary" onClick={handleSubmit}
-                    sx={{
-                      borderRadius: 6,
-                      color: "black",
-                      background: "transparent",
-                      border: "1px solid transparent",
-                      position: "relative",
-                      overflow: "hidden",
-                      height: 48,
-                      width: 145,
-                      zIndex: 0,
-                      marginTop: "5px",
-                      marginBottom: "5px",
-                      fontWeight: "bold",
-                      "&::before": {
-                        content: '""',
-                        position: "absolute",
-                        top: 0,
-                        right: 0,
-                        bottom: 0,
-                        left: 0,
-                        zIndex: -1,
-                        background: "white",
-                        border: 0,
-                        borderRadius: 3,
-                        padding: "0 30px",
-                        transition: "0.4s",
-                      },
-                      "&:hover": {
-                        background: "transparent", 
-                      },
-                    }}>
-                    Subscribe
-                  </Button>
+            <Typography
+              variant="body2"
+              component="p"
+              sx={{
+                fontWeight: "bold",
+                fontSize: {
+                  xs: ".75rem",
+                  sm: ".75rem",
+                  md: ".75rem",
+                  lg: "1rem",
+                  xl: "1rem",
+                },
+                marginBottom: "15px",
+              }}
+            >
+              Subscribe to Get Our Updates
+            </Typography>
           </Grid>
-          
+
+          {isSubmitted ? (
+            <Grid item>
+              Thank you. Please check your email address for a confirmation email.
+            </Grid>
+          ) : (
+            <Grid container item alignItems="center" spacing={1}>
+
+              {/* Email TextField */}
+              <Grid item>
+                <TextField
+                  type="email"
+                  variant="outlined"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  error={!!emailError}
+                  helperText={emailError || " "}
+                  style={{ width: '200px', marginRight: 8, backgroundColor: 'transparent' }}
+                  sx={{
+                    '& fieldset': {
+                      borderRadius: '25px'
+                    }
+                  }}
+                />
+                <Button variant="contained" color="primary" onClick={handleSubmit}
+                  sx={{
+                    borderRadius: 6,
+                    color: "black",
+                    background: "transparent",
+                    border: "1px solid transparent",
+                    position: "relative",
+                    overflow: "hidden",
+                    height: 48,
+                    width: 145,
+                    zIndex: 0,
+                    marginTop: "5px",
+                    marginBottom: "5px",
+                    fontWeight: "bold",
+                    "&::before": {
+                      content: '""',
+                      position: "absolute",
+                      top: 0,
+                      right: 0,
+                      bottom: 0,
+                      left: 0,
+                      zIndex: -1,
+                      background: "white",
+                      border: 0,
+                      borderRadius: 3,
+                      padding: "0 30px",
+                      transition: "0.4s",
+                    },
+                    "&:hover": {
+                      background: "transparent",
+                    },
+                  }}>
+                  Subscribe
+                </Button>
+              </Grid>
+
+            </Grid>
+          )}
         </Grid>
-      )}
+      </Grid>
+    
     </Grid>
-  </Grid>
-</Grid>
 
   );
 };
