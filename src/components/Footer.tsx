@@ -5,17 +5,12 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import supabase from "../services/supabaseClient";
 
-interface FooterProps {
-  // Define any props you need here
-}
-
 const Footer: React.FC = () => {
   const [email, setEmail] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [emailError, setEmailError] = useState<string | null>(null);
 
   const isValidEmail = (email: string) => {
-    // Simple email validation with regex
     const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10}$/;
     return regex.test(email);
   };
@@ -25,7 +20,7 @@ const Footer: React.FC = () => {
     if (isValidEmail(email)) {
       setEmailError(null);
 
-      // Insert the email into the subscribers table
+      // Insert the email into table
       const { error } = await supabase
         .from('emails')
         .insert([
@@ -34,7 +29,6 @@ const Footer: React.FC = () => {
 
       if (error) {
         console.error("Error inserting email:", error);
-        // Optionally, set an error state here to inform the user of the issue.
       } else {
         setIsSubmitted(true);
       }
@@ -49,24 +43,21 @@ const Footer: React.FC = () => {
   return (
 
 
-    // ... rest of your component code ...
-
     <Box bgcolor="transparent" color="black" style={{ width: '100%', padding: '20px 0' }}>
       <Grid container spacing={2} direction="row" alignItems="center">
-        {/* First Grid: Logo & Company Name */}
         <Grid item xs={12} sm={6}>
           <Box
             display="flex"
             alignItems="center"
             justifyContent="center"
           >
-            {/* Replace below with your logo */}
+           
             <img src="/path/to/your/logo.png" alt="Company Logo" height="60" />
             <span style={{ marginLeft: 8, fontSize: '20px' }}>Company Name</span>
           </Box>
         </Grid>
 
-        {/* Second Grid: Email Subscription Form or Thank You Message */}
+ 
         <Grid item xs={12} sm={6}>
           <Box
             display="flex"
@@ -123,7 +114,7 @@ const Footer: React.FC = () => {
                         transition: "0.4s",
                       },
                       "&:hover": {
-                        background: "transparent", // This ensures the background remains transparent on hover.
+                        background: "transparent", 
                       },
                     }}>
                     Subscribe
