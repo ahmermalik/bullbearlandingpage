@@ -1,10 +1,7 @@
-import React from "react";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
-import ShowChartRoundedIcon from "@mui/icons-material/ShowChartRounded";
-import styles from "./Roadmap.module.scss";
 import { Grid } from "@mui/material";
 import comm from "../images/comm.png";
 import tan from "../images/tan.png";

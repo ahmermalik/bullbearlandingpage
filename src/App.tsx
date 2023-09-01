@@ -9,9 +9,6 @@ import Typography from "@mui/material/Typography";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { styled } from "@mui/system";
 
-// Third-party libraries
-import ScrollToTop from "react-scroll-to-top";
-
 // Local component imports
 import NavBar from "./components/NavBar";
 import Roadmap from "./components/Roadmap";

@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Grid, Typography, Button } from "@mui/material";
+import  { useState, useEffect } from "react";
+import { Button } from "@mui/material";
 import PhotoAlbum from "react-photo-album";
 import rank from "../images/other_proofs/ranking.png";
 import lambo from "../images/lambo/lambo.png"

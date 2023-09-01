@@ -4,6 +4,8 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import supabase from "../services/supabaseClient";
+import Typography from "@mui/material/Typography";
+import logo from "../images/logo.png";
 
 
 const Footer: React.FC = () => {
@@ -44,42 +46,63 @@ const Footer: React.FC = () => {
   return (
 
 
-    <Box bgcolor="transparent" color="black" style={{ width: '100%', padding: '20px 0' }}>
-      <Grid container spacing={2} direction="row" alignItems="center">
-        <Grid item xs={12} sm={6}>
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-          >
-           
-            <img src="/path/to/your/logo.png" alt="Company Logo" height="60" />
-            <span style={{ marginLeft: 8, fontSize: '20px' }}>Company Name</span>
-          </Box>
+<Grid container spacing={2} direction="row" alignItems="center" bgcolor="transparent" style={{ width: '100%', padding: '20px 0' }}>
+  
+  {/* Logo and Title */}
+  <Grid item xs={12} sm={6}>
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <img src={logo} alt="Bull Bear Logo" height="60" />
+      <Typography sx={{fontWeight: "bold"}} style={{ marginLeft: 8, fontSize: '20px' }}>Bull Bear Buddies</Typography>
+    </Box>
+  </Grid>
+
+  {/* Subscription Section */}
+  <Grid item xs={12} sm={6}>
+    <Grid container direction="column" alignItems="flex-start" spacing={1}>
+      
+      {/* Text: "Subscribe to Get Our Updates" */}
+      <Grid item>
+        <Typography
+          variant="body2"
+          component="p"
+          sx={{
+            fontWeight: "bold",
+            fontSize: {
+              xs: ".75rem",
+              sm: ".75rem",
+              md: ".75rem",
+              lg: "1rem",
+              xl: "1rem",
+            },
+            marginBottom: "15px",
+          }}
+        >
+          Subscribe to Get Our Updates
+        </Typography>
+      </Grid>
+
+      {isSubmitted ? (
+        <Grid item>
+          Thank you. Please check your email address for a confirmation email.
         </Grid>
-
- 
-        <Grid item xs={12} sm={6}>
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-          >
-            {isSubmitted ? (
-              <span>Thank you. Please check your email address for a confirmation email.</span>
-            ) : (
-              <>
-                <span>
-
-                  <TextField
+      ) : (
+        <Grid container item alignItems="center" spacing={1}>
+          
+          {/* Email TextField */}
+          <Grid item>
+          <TextField
                     type="email"
                     variant="outlined"
                     placeholder="Enter your email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     error={!!emailError}
-                    helperText={emailError}
-                    style={{ marginRight: 8, backgroundColor: 'transparent' }}
+                   helperText={emailError || " "}
+                    style={{ width: '200px', marginRight: 8, backgroundColor: 'transparent' }}
                     sx={{
                       '& fieldset': {
                         borderRadius: '25px'
@@ -120,14 +143,13 @@ const Footer: React.FC = () => {
                     }}>
                     Subscribe
                   </Button>
-                </span>
-              </>
-            )}
-          </Box>
+          </Grid>
+          
         </Grid>
-      </Grid>
-    </Box>
-
+      )}
+    </Grid>
+  </Grid>
+</Grid>
 
   );
 };
