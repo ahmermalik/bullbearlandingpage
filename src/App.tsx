@@ -17,6 +17,7 @@ import SectionTitle from "./components/SectionTitle";
 import Why from "./components/Why";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import logo from "./images/logo.png"
 
 // Local assets and styles
 import token from "./images/presale.png";
@@ -324,19 +325,38 @@ function App() {
             <SectionTitle name="Roadmap & Features List" />
 
             <div className="roadmap-content">
+
+              <Box
+                sx={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '100%',
+                  '& img': {
+                    width: ['100%', '50%', '25%'], // 100% on small screens, 50% on medium, 25% on large screens
+                  }
+                }}
+              >
+                <HoverableImage
+                  src={logo}
+                  alt="bull bear buddies logo"
+                />
+              </Box>
+
+
               <Roadmap />
             </div>
           </section>
           <section className="why">
             <SectionTitle name="Why" />{" "}
 
-            <Why/>
+            <Why />
           </section>
           <section>
-            <Footer/>
-            </section>
+            <Footer />
+          </section>
         </div>
-        <ScrollToTopButton/>
+        <ScrollToTopButton />
       </div>
     </ThemeProvider>
   );
