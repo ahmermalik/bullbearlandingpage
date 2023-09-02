@@ -9,6 +9,7 @@ import Typography from "@mui/material/Typography";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import { styled } from "@mui/system";
 
+
 // Local component imports
 import NavBar from "./components/NavBar";
 import Roadmap from "./components/Roadmap";
@@ -18,11 +19,17 @@ import Why from "./components/Why";
 import Footer from "./components/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import logo from "./images/logo.png"
+import mixpanel from 'mixpanel-browser';
+import useTrackScrollToBottom from "./utils/useTrackScrollToBottom";
 
 // Local assets and styles
 import token from "./images/presale.png";
 import ether from "./images/ether.png";
 import "./App.scss";
+const { REACT_APP_API_MIXPANEL } = process.env;
+mixpanel.init(REACT_APP_API_MIXPANEL as string, { ignore_dnt: true });
+
+mixpanel.track_pageview();
 
 console.log(
   // I see you're inspecting the code, so here's a little surprise for you👇
@@ -64,6 +71,10 @@ const HoverableImage = styled("img")({
 });
 
 function App() {
+  useTrackScrollToBottom();
+  const track = (button: string) => {
+    mixpanel.track(button);
+  };
   const [section, setSection] = useState("Home");
   // eslint-disable-next-line react-hooks/exhaustive-deps
   return (
@@ -137,6 +148,7 @@ function App() {
                 <span style={{ marginTop: "12px" }}>
                   {" "}
                   <Button
+                    onClick={()=>track('Join Presale')}
                     variant="contained"
                     sx={{
                       borderRadius: 6,
@@ -173,6 +185,7 @@ function App() {
                     Join Presale
                   </Button>
                   <Button
+                    onClick={()=>track('Dex Tools')}
                     variant="contained"
                     style={{ marginLeft: "10px" }}
                     sx={{
@@ -283,6 +296,7 @@ function App() {
                   Unleash Your Time: Say Goodbye to Endless Research
                 </Typography>
                 <Button
+                  onClick={()=>track('Launch dApp')}
                   variant="contained"
                   color="primary"
                   disabled
@@ -302,7 +316,7 @@ function App() {
               <SectionTitle name="About" />
             </Box>
 
-            <About />
+            <About/>
           </section>
           <section className="roadmap">
             <SectionTitle name="Roadmap & Features List" />

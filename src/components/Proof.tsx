@@ -37,7 +37,7 @@ function Proof() {
 
     // Update the state variable.
     setImageObjects(newImageObjects);
-  }, []); // The empty dependency array ensures this useEffect runs only once after the initial render.
+  },[images]); // The empty dependency array ensures this useEffect runs only once after the initial render.
 
   return (
     <div>
