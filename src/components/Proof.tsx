@@ -2,14 +2,15 @@ import { useState, useEffect } from "react";
 import { Button, Typography } from "@mui/material";
 import Box from '@mui/material/Box';
 import PhotoAlbum from "react-photo-album";
-import rank from "../images/other_proofs/ranking.png";
 import lambo from "../images/lambo/lambo.png"
 import { styled } from "@mui/system";
+import Quote from "./Quote";
+
 
 const imageContext = require.context(
   "../images/proofs",
   false,
-  /img_\d+\.jpeg$/
+  /img_\d+\.jpg$/
 );
 
 const HoverableImage = styled("img")({
@@ -39,15 +40,10 @@ function Proof() {
 
   return (
     <div>
-      <HoverableImage
-        src={rank}
-        alt="token-presale-image"
-        style={{ width: "100%" }}
-      />
       <PhotoAlbum layout="rows" photos={imageObjects} />
 <div style={{textAlign:'center', marginTop: '50px'}}>
-
-<Typography sx={{ fontWeight: "bold" }}> You Are Not Alone in These Pursuits.</Typography>
+   <Quote />
+<Typography sx={{ fontWeight: "bold", marginTop:"10px" }}> You Are Not Alone in These Pursuits.</Typography>
 <Typography sx={{ fontWeight: "bold" }}> Join Us.</Typography>
 </div>
       <span style={{ display: 'flex', marginTop: '20px', alignItems: "center", justifyContent: "center" }}>
@@ -81,7 +77,7 @@ function Proof() {
               transition: "0.4s",
             },
             "&:hover": {
-              background: "transparent", // This ensures the background remains transparent on hover.
+              background: "transparent",
             },
           }}
         >
@@ -90,7 +86,6 @@ function Proof() {
 
         <a href="https://discord.gg/P8X35prGKX" target="_blank" rel="noopener noreferrer">
           <Button
-            // onClick={() => setShowToggleComponent(!showToggleComponent)}
             variant="contained"
             style={{ marginLeft: "10px" }}
             sx={{
