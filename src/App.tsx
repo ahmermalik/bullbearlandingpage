@@ -74,16 +74,6 @@ function App() {
     // "dependable",
     "not giving you financial advice",
   ];
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 3000); // change word every 3 seconds
-
-    // Clean up function to clear the interval when the component unmounts
-    return () => clearInterval(interval);
-  }, [words]);
 
   return (
     <ThemeProvider theme={theme}>

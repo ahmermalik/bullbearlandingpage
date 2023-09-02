@@ -40,8 +40,8 @@ export default function Navbar(props: Props) {
       <Typography variant="h6" sx={{ my: 2 }}>
         <img
           src={logo}
-          alt="Logo"
-          style={{ maxHeight: "40px", marginRight: "10px" }}
+          alt="bull bear buddies logo"
+          style={{ maxHeight: "100px", marginRight: "10px" }}
         />
       </Typography>
 
@@ -118,7 +118,7 @@ export default function Navbar(props: Props) {
           <img
             src={logo}
             alt="Logo"
-            style={{ maxHeight: "40px", marginRight: "10px" }}
+            style={{ maxHeight: "100px", marginRight: "10px" }}
           />
           <Typography
             color="#0F9FA3"
@@ -161,6 +161,7 @@ export default function Navbar(props: Props) {
               </Link>
             ))}
           </Box>
+          <Box flexGrow={1}></Box> 
           <IconButton
             color="info"
             edge="end"
