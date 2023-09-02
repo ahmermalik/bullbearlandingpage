@@ -30,7 +30,7 @@ export default function About() {
   return (
     <Grid
       container
-      spacing={3}
+      spacing={4.5}
       sx={{
         display: "flex",
         justifyContent: "center"

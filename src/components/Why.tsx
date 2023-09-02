@@ -48,7 +48,7 @@ const Why = () => {
   >
     🔹 Transactions: 5,596
     <br />
-    🔹 Cumulative Trading Volume: $400,502,650
+    🔹 Cumulative Trading Volume: $400,502,650+
     <br />
     🔹 Performance Rank: Outperformed 99.86% on Binance
     <br />

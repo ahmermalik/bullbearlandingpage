@@ -68,7 +68,7 @@ const checklistData = [
 
 export default function ChecklistCards() {
   return (
-    <Grid container spacing={3} sx={{ display: 'flex' }}>
+    <Grid container spacing={4.5} sx={{ display: 'flex' }}>
       {checklistData.map((checklist, index) => (
         <Grid
           item

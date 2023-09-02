@@ -25,20 +25,20 @@ import ether from "./images/ether.png";
 import "./App.scss";
 
 console.log(
-// I see you're inspecting the code, so here's a little surprise for you👇
-// Our upcoming analytics platform release will:
-// -Give you every coin that’s gonna 🚀
-// -Tell you before a coin 📉
-// -Alert you of sketchy 👥 and 🪙
-// -Tools that answer questions like
-// -Should I sell now, how much?
-// -Is this a good place to buy?
-// -Where’s my liquidation level?
-// -Where should I set my stop loss?
-// -A community where you can 🦍 together. This means more gains, faster, and long term. 💰
-// -No more getting rekt 🤕
-// An analytics platform that automates away Tradingview.
-// Why spend hours looking at charts when you can join your buddies and win?
+  // I see you're inspecting the code, so here's a little surprise for you👇
+  // Our upcoming analytics platform release will:
+  // -Give you every coin that’s gonna 🚀
+  // -Tell you before a coin 📉
+  // -Alert you of sketchy 👥 and 🪙
+  // -Tools that answer questions like
+  // -Should I sell now, how much?
+  // -Is this a good place to buy?
+  // -Where’s my liquidation level?
+  // -Where should I set my stop loss?
+  // -A community where you can 🦍 together. This means more gains, faster, and long term. 💰
+  // -No more getting rekt 🤕
+  // An analytics platform that automates away Tradingview.
+  // Why spend hours looking at charts when you can join your buddies and win?
 )
 
 const theme = createTheme({
@@ -85,7 +85,7 @@ function App() {
               sx={{ marginBottom: "100px" }}
               alignItems="center"
             >
-             
+
               <Grid
                 item
                 xs={12}
@@ -117,8 +117,8 @@ function App() {
                   component="p"
                   sx={{
                     marginBottom: "15px",
-                    marginTop: "15px", 
-                    lineHeight: 1.6, 
+                    marginTop: "15px",
+                    lineHeight: 1.6,
                     color: "#333",
                     "& strong": {
                       fontWeight: "bold",
@@ -202,7 +202,7 @@ function App() {
                         transition: "0.4s",
                       },
                       "&:hover": {
-                        background: "transparent", 
+                        background: "transparent",
                       },
                     }}
                   >
@@ -295,10 +295,13 @@ function App() {
           </section>
           {/*About section below  */}
           <section className="about">
-            <br />
-            <br />
-            <br />
-            <SectionTitle name="About" />
+            <Box sx={{
+              marginTop: '50px',
+              marginBottom: '50px',
+            }}>
+              <SectionTitle name="About" />
+            </Box>
+
             <About />
           </section>
           <section className="roadmap">
@@ -308,6 +311,7 @@ function App() {
 
               <Box
                 sx={{
+                  marginTop: '-50px',
                   display: 'flex',
                   justifyContent: 'center',
                   alignItems: 'center',

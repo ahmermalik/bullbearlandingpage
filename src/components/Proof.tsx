@@ -15,6 +15,7 @@ const imageContext = require.context(
 
 const HoverableImage = styled("img")({
   transition: "transform 0.3s ease-in-out",
+  marginTop: "40px",
   marginBottom: "10px",
   "&:hover": {
     transform: "scale(1.3)",
