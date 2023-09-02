@@ -1,5 +1,6 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@mui/material";
+import Box from '@mui/material/Box';
 import PhotoAlbum from "react-photo-album";
 import rank from "../images/other_proofs/ranking.png";
 import lambo from "../images/lambo/lambo.png"
@@ -39,96 +40,101 @@ function Proof() {
   return (
     <div>
       <HoverableImage
-          src={rank}
-          alt="token-presale-image"
-          style={{ width: "100%" }}
-        />
+        src={rank}
+        alt="token-presale-image"
+        style={{ width: "100%" }}
+      />
       <PhotoAlbum layout="rows" photos={imageObjects} />
-      <span style={{ display: 'flex', marginTop:'50px', alignItems:"center"}}>
-        
-            <Button
-              variant="contained"
-              sx={{
-                borderRadius: 6,
-                color: "#65B20A",
-                background: "transparent",
-                border: "1px solid transparent",
-                position: "relative",
-                overflow: "hidden",
-                height: 48,
-                width: 145,
-                zIndex: 0,
-                marginTop: "5px",
-                marginBottom: "5px",
-                fontWeight: "bold",
-                "&::before": {
-                  content: '""',
-                  position: "absolute",
-                  top: 0,
-                  right: 0,
-                  bottom: 0,
-                  left: 0,
-                  zIndex: -1,
-                  background: "white",
-                  border: 0,
-                  borderRadius: 3,
-                  padding: "0 30px",
-                  transition: "0.4s",
-                },
-                "&:hover": {
-                  background: "transparent", // This ensures the background remains transparent on hover.
-                },
-              }}
-            >
-              Join Presale
-            </Button>
+      <span style={{ display: 'flex', marginTop: '50px', alignItems: "center", justifyContent: "center" }}>
+        <Button
+          variant="contained"
+          sx={{
+            borderRadius: 6,
+            color: "#65B20A",
+            background: "transparent",
+            border: "1px solid transparent",
+            position: "relative",
+            overflow: "hidden",
+            height: 48,
+            width: 145,
+            zIndex: 0,
+            marginTop: "5px",
+            marginBottom: "5px",
+            fontWeight: "bold",
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              top: 0,
+              right: 0,
+              bottom: 0,
+              left: 0,
+              zIndex: -1,
+              background: "white",
+              border: 0,
+              borderRadius: 3,
+              padding: "0 30px",
+              transition: "0.4s",
+            },
+            "&:hover": {
+              background: "transparent", // This ensures the background remains transparent on hover.
+            },
+          }}
+        >
+          Join Presale
+        </Button>
 
-            <a href="https://discord.gg/P8X35prGKX" target="_blank" rel="noopener noreferrer">
-            <Button
+        <a href="https://discord.gg/P8X35prGKX" target="_blank" rel="noopener noreferrer">
+          <Button
             // onClick={() => setShowToggleComponent(!showToggleComponent)}
-              variant="contained"
-              style={{ marginLeft: "10px" }}
-              sx={{
-                borderRadius: 6,
-                color: "#0E9296",
-                background: "transparent",
-                border: "1px solid transparent",
-                position: "relative",
-                overflow: "hidden",
-                height: 48,
-                width: 145,
-                zIndex: 0,
-                marginTop: "5px",
-                marginBottom: "5px",
-                fontWeight: "bold",
-                "&::before": {
-                    content: '""',
-                    position: "absolute",
-                    top: 0,
-                    right: 0,
-                    bottom: 0,
-                    left: 0,
-                    zIndex: -1,
-                    background: "white",
-                    border: 0,
-                    borderRadius: 3,
-                    padding: "0 30px",
-                    transition: "0.4s",
-                },
-                "&:hover": {
-                  background: "transparent", // This ensures the background remains transparent on hover.
-                },
-              }}
-            >
-              Discord
-            </Button>
-            </a>
-            </span>
-      <HoverableImage
+            variant="contained"
+            style={{ marginLeft: "10px" }}
+            sx={{
+              borderRadius: 6,
+              color: "#0E9296",
+              background: "transparent",
+              border: "1px solid transparent",
+              position: "relative",
+              overflow: "hidden",
+              height: 48,
+              width: 145,
+              zIndex: 0,
+              marginTop: "5px",
+              marginBottom: "5px",
+              fontWeight: "bold",
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: 0,
+                right: 0,
+                bottom: 0,
+                left: 0,
+                zIndex: -1,
+                background: "white",
+                border: 0,
+                borderRadius: 3,
+                padding: "0 30px",
+                transition: "0.4s",
+              },
+              "&:hover": {
+                background: "transparent", // This ensures the background remains transparent on hover.
+              },
+            }}
+          >
+            Discord
+          </Button>
+        </a>
+      </span>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+      >
+        <HoverableImage
           src={lambo}
           alt="token-presale-image"
-          style={{ width: "100%" }}
+          style={{ width: "75%", marginTop: "25px" }}
         />
+      </Box>
     </div>
   );
 }

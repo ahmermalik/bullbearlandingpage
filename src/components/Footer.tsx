@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
 
   return (
 
-<Grid container spacing={2} direction="row" alignItems="flex-start" bgcolor="transparent" style={{ width: '100%', padding: '20px 0' }}>
+<Grid container spacing={2} direction="row" alignItems="flex-start" bgcolor="transparent" style={{ width: '100%', marginTop:'150px'}}>
       
       <Grid item xs={12} sm={6} style={{ minHeight: '100px' }}> 
           {/* minHeight is just an example value, adjust as needed */}
