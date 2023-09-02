@@ -132,7 +132,7 @@ function Proof() {
         <HoverableImage
           src={lambo}
           alt="token-presale-image"
-          style={{ width: "75%", marginTop: "25px" }}
+          style={{ width: "75%", marginTop: "25px, " }}
         />
       </Box>
     </div>

@@ -1,5 +1,5 @@
 // React core
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // MUI imports
 import Box from "@mui/material/Box";
@@ -24,7 +24,22 @@ import token from "./images/presale.png";
 import ether from "./images/ether.png";
 import "./App.scss";
 
-
+console.log(
+// I see you're inspecting the code, so here's a little surprise for you👇
+// Our upcoming analytics platform release will:
+// -Give you every coin that’s gonna 🚀
+// -Tell you before a coin 📉
+// -Alert you of sketchy 👥 and 🪙
+// -Tools that answer questions like
+// -Should I sell now, how much?
+// -Is this a good place to buy?
+// -Where’s my liquidation level?
+// -Where should I set my stop loss?
+// -A community where you can 🦍 together. This means more gains, faster, and long term. 💰
+// -No more getting rekt 🤕
+// An analytics platform that automates away Tradingview.
+// Why spend hours looking at charts when you can join your buddies and win?
+)
 
 const theme = createTheme({
   typography: {
@@ -48,33 +63,9 @@ const HoverableImage = styled("img")({
   },
 });
 
-
-
 function App() {
   const [section, setSection] = useState("Home");
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const words = [
-    "a community",
-    "not wasting time on charts",
-    "independent",
-    "aware of the power of A.I.",
-    "an enjoyooor of saving time",
-    "a meme",
-    // "on the grind",
-    // "loyal",
-    // "trying to make it",
-    // "resilient",
-    // "compassionate",
-    // "kind",
-    // "hell bent on retiring",
-    // "consistent",
-    // "committed",
-    // "always there",
-    // "trust worthy",
-    // "dependable",
-    "not giving you financial advice",
-  ];
-
   return (
     <ThemeProvider theme={theme}>
       <div className="app">
@@ -94,7 +85,7 @@ function App() {
               sx={{ marginBottom: "100px" }}
               alignItems="center"
             >
-              {/* Grid item 1 */}
+             
               <Grid
                 item
                 xs={12}
@@ -126,11 +117,10 @@ function App() {
                   component="p"
                   sx={{
                     marginBottom: "15px",
-                    marginTop: "15px", // Added top margin for separation
-                    lineHeight: 1.6, // Increased line height for better readability
-                    color: "#333", // Darkened the text for better contrast (optional based on background)
+                    marginTop: "15px", 
+                    lineHeight: 1.6, 
+                    color: "#333",
                     "& strong": {
-                      // Emphasize key points using bold
                       fontWeight: "bold",
                     },
                   }}
@@ -160,6 +150,7 @@ function App() {
                       zIndex: 0,
                       marginTop: "5px",
                       marginBottom: "5px",
+                      marginRight: "20px",
                       fontWeight: "bold",
                       "&::before": {
                         content: '""',
@@ -172,11 +163,10 @@ function App() {
                         background: "white",
                         border: 0,
                         borderRadius: 3,
-                        padding: "0 30px",
                         transition: "0.4s",
                       },
                       "&:hover": {
-                        background: "transparent", // This ensures the background remains transparent on hover.
+                        background: "transparent",
                       },
                     }}
                   >
@@ -212,7 +202,7 @@ function App() {
                         transition: "0.4s",
                       },
                       "&:hover": {
-                        background: "transparent", // This ensures the background remains transparent on hover.
+                        background: "transparent", 
                       },
                     }}
                   >
@@ -354,18 +344,3 @@ function App() {
 
 export default App;
 
-// Our upcoming analytics platform release will:
-
-// -Give you every coin that’s gonna 🚀
-// -Tell you before a coin 📉
-// -Alert you of sketchy 👥 and 🪙
-// -Tools that answer questions like
-// -Should I sell now, how much?
-// -Is this a good place to buy?
-// -Where’s my liquidation level?
-// -Where should I set my stop loss?
-// -A community where you can 🦍 together. This means more gains, faster, and long term. 💰
-// -No more getting rekt 🤕
-
-// An analytics platform that automates away Tradingview.
-// Why spend hours looking at charts when you can join your buddies and win?
