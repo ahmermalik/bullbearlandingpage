@@ -86,7 +86,7 @@ const Why = () => {
                 position: "relative",
                 overflow: "hidden",
                 height: 48,
-                width: 145,
+                width: 175,
                 zIndex: 0,
                 marginTop: "5px",
                 marginBottom: "5px",
@@ -110,7 +110,7 @@ const Why = () => {
                 },
               }}
             >
-              Proof
+              Proof of Gains
             </Button>
             </span>
           </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import Box from '@mui/material/Box';
 import PhotoAlbum from "react-photo-album";
 import rank from "../images/other_proofs/ranking.png";
@@ -45,7 +45,12 @@ function Proof() {
         style={{ width: "100%" }}
       />
       <PhotoAlbum layout="rows" photos={imageObjects} />
-      <span style={{ display: 'flex', marginTop: '50px', alignItems: "center", justifyContent: "center" }}>
+<div style={{textAlign:'center', marginTop: '50px'}}>
+
+<Typography sx={{ fontWeight: "bold" }}> You Are Not Alone in These Pursuits.</Typography>
+<Typography sx={{ fontWeight: "bold" }}> Join Us.</Typography>
+</div>
+      <span style={{ display: 'flex', marginTop: '20px', alignItems: "center", justifyContent: "center" }}>
         <Button
           variant="contained"
           sx={{
