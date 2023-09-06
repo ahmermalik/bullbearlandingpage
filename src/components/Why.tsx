@@ -4,13 +4,9 @@ import winners from "../images/winners.png";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/system";
 import Proof from "./Proof";
+import HoverableImage from "../utils/HoverableImage";
 
-const HoverableImage = styled("img")({
-  transition: "transform 0.3s ease-in-out",
-  "&:hover": {
-    transform: "scale(1.1)",
-  },
-});
+
 const Why = () => {
     const [showToggleComponent, setShowToggleComponent] = useState(false);
   return (

@@ -7,8 +7,6 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { styled } from "@mui/system";
-
 
 // Local component imports
 import NavBar from "./components/NavBar";
@@ -21,10 +19,11 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import logo from "./images/logo.png"
 import mixpanel from 'mixpanel-browser';
 import useTrackScrollToBottom from "./utils/useTrackScrollToBottom";
+import DAppLaunch from "./components/DAppLaunch";
+import HoverableImage from "./utils/HoverableImage";
 
 // Local assets and styles
 import token from "./images/presale.png";
-import ether from "./images/ether.png";
 import "./App.scss";
 const { REACT_APP_API_MIXPANEL } = process.env;
 mixpanel.init(REACT_APP_API_MIXPANEL as string, { ignore_dnt: true });
@@ -60,13 +59,6 @@ const theme = createTheme({
         },
       },
     },
-  },
-});
-
-const HoverableImage = styled("img")({
-  transition: "transform 0.3s ease-in-out",
-  "&:hover": {
-    transform: "scale(1.1)",
   },
 });
 
@@ -148,7 +140,7 @@ function App() {
                 <span style={{ marginTop: "12px" }}>
                   {" "}
                   <Button
-                    onClick={()=>track('Join Presale')}
+                    onClick={() => track('Join Presale')}
                     variant="contained"
                     sx={{
                       borderRadius: 6,
@@ -185,7 +177,7 @@ function App() {
                     Join Presale
                   </Button>
                   <Button
-                    onClick={()=>track('Dex Tools')}
+                    onClick={() => track('Dex Tools')}
                     variant="contained"
                     style={{ marginLeft: "10px" }}
                     sx={{
@@ -248,65 +240,12 @@ function App() {
             </Grid>
 
             {/*dApp area below  */}
-            <Grid
-              container
-              spacing={3}
-              sx={{
-                backgroundColor: "transparent",
-                padding: 3,
-                borderRadius: 5,
-                boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-              }}
-            >
-              <Grid
-                item
-                xs={12}
-                md={6}
-                container
-                alignItems="center"
-                justifyContent="center"
-              >
-                <HoverableImage
-                  src={ether}
-                  alt="description"
-                  style={{ width: "50%" }}
-                />
-              </Grid>
-              <Grid
-                item
-                xs={12}
-                md={6}
-                container
-                alignItems="center"
-                justifyContent="flex-start" // Align to the left
-              >
-                <Typography
-                  variant="h2"
-                  sx={{
-                    fontWeight: "bold",
-                    fontSize: {
-                      xs: "1.25rem", // for screens 0px and up
-                      sm: "1.5rem", // for screens 600px and up
-                      md: "2rem", // for screens 900px and up
-                      lg: "2.5rem", // for screens 1200px and up
-                      xl: "3rem", // for screens 1536px and up
-                    },
-                  }}
-                >
-                  Unleash Your Time: Say Goodbye to Endless Research
-                </Typography>
-                <Button
-                  onClick={()=>track('Launch dApp')}
-                  variant="contained"
-                  color="primary"
-                  disabled
-                  sx={{ height: 48, width: 135, borderRadius: 6, marginTop: 2 }}
-                >
-                  Launch dApp
-                </Button>
-              </Grid>
-            </Grid>
-          </section>
+          
+            </section>
+            <section>
+            <DAppLaunch />
+            </section>
+   
           {/*About section below  */}
           <section className="about">
             <Box sx={{
@@ -316,7 +255,7 @@ function App() {
               <SectionTitle name="About" />
             </Box>
 
-            <About/>
+            <About />
           </section>
           <section className="roadmap">
             <SectionTitle name="Roadmap & Features List" />
