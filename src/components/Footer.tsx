@@ -142,7 +142,7 @@ const Footer: React.FC = () => {
           )}
           <Grid item xs={12} style={{ marginTop: '10px' }}>
             <Typography variant="caption" sx={{ color: "white" }}>
-              <a href="/about-us">About Us</a> | <a href="/contact">Contact</a> | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a>
+              <a href="">About Us</a> | <a href="">Contact</a> | <a href="">Privacy Policy</a> | <a href="">Terms of Service</a>
             </Typography>
           </Grid>
           <Grid item xs={12}>
