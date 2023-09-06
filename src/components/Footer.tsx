@@ -44,38 +44,29 @@ const Footer: React.FC = () => {
 
 
   return (
+    <Grid container spacing={2} direction="row" alignItems="flex-start" bgcolor="transparent" style={{ width: '100%', marginTop: '150px' }}>
 
-<Grid container spacing={2} direction="row" alignItems="flex-start" bgcolor="transparent" style={{ width: '100%', marginTop:'150px'}}>
-      
-      <Grid item xs={12} sm={6} style={{ minHeight: '100px' }}> 
-          <Box
-            display="flex"
-            alignItems="center"
-            justifyContent="left"
-          >
-            <img src={logo} alt="Bull Bear Logo" height="60" />
-            <Typography sx={{ fontWeight: "bold" }} style={{ marginLeft: 8, fontSize: '20px' }}>Bull Bear Buddies</Typography>
-           
-          </Box>
-          <Typography>Copyright © 2023. All Rights Reserved.</Typography>
+      <Grid item xs={12} sm={6} style={{ minHeight: '100px' }}>
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="left"
+        >
+          <img src={logo} alt="Bull Bear Logo" height="60" />
+          <Typography color="#0F9FA3" sx={{ fontWeight: "bold", fontSize: '20px' }} style={{ marginLeft: 8 }}>Bull Bear Buddies</Typography>
+        </Box>
       </Grid>
 
       <Grid item xs={12} sm={6}>
         <Grid container direction="column" alignItems="flex-start" spacing={1}>
-
           <Grid item>
             <Typography
               variant="body2"
               component="p"
+              color= "black"
               sx={{
                 fontWeight: "bold",
-                fontSize: {
-                  xs: ".75rem",
-                  sm: ".75rem",
-                  md: ".75rem",
-                  lg: "1rem",
-                  xl: "1rem",
-                },
+                fontSize: '0.75rem',
                 marginBottom: "15px",
               }}
             >
@@ -89,8 +80,6 @@ const Footer: React.FC = () => {
             </Grid>
           ) : (
             <Grid container item alignItems="center" spacing={1}>
-
-              {/* Email TextField */}
               <Grid item>
                 <TextField
                   type="email"
@@ -104,9 +93,16 @@ const Footer: React.FC = () => {
                   sx={{
                     '& fieldset': {
                       borderRadius: '25px'
+                    },
+                    '& .MuiInputBase-input::placeholder': {
+                      color: "black", // Change to your desired color
+                    },
+                    '& .Mui-focused .MuiInputBase-input::placeholder': {
+                      color: "black", // Hide the placeholder text when the input is focused, adjust as needed
                     }
                   }}
                 />
+
                 <Button variant="contained" color="primary" onClick={handleSubmit}
                   sx={{
                     borderRadius: 6,
@@ -142,12 +138,18 @@ const Footer: React.FC = () => {
                   Subscribe
                 </Button>
               </Grid>
-
             </Grid>
           )}
+          <Grid item xs={12} style={{ marginTop: '10px' }}>
+            <Typography variant="caption" sx={{ color: "white" }}>
+              <a href="/about-us">About Us</a> | <a href="/contact">Contact</a> | <a href="/privacy-policy">Privacy Policy</a> | <a href="/terms-of-service">Terms of Service</a>
+            </Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="caption">Copyright © 2023. All Rights Reserved.</Typography>
+          </Grid>
         </Grid>
       </Grid>
-    
     </Grid>
 
   );
