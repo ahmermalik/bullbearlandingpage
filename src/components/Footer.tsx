@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
 
           {isSubmitted ? (
             <Grid item>
-              Thank you. Please check your email address for a confirmation email.
+              Thank you for signing up!
             </Grid>
           ) : (
             <Grid container item alignItems="center" spacing={1}>
