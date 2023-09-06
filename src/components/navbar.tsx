@@ -107,7 +107,7 @@ export default function Navbar(props: Props) {
             onClick={handleDrawerToggle}
             sx={{
               mr: 2,
-              display: { sm: "none" },
+              display: { xs: "block", sm: "block", md: "block", lg: "none" },
               "& svg": {
                 color: "#0F9FA3",
               },
@@ -132,7 +132,7 @@ export default function Navbar(props: Props) {
           >
             Bull Bear Buddies
           </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box sx={{ display: { xs: "none", sm: "none", md: "none", lg: "block" } }}>
             {navItems.map((item) => (
               <Link to={item.toLowerCase()} smooth={true} key={item}>
                 <Button
@@ -161,7 +161,7 @@ export default function Navbar(props: Props) {
               </Link>
             ))}
           </Box>
-          <Box flexGrow={1}></Box> 
+          <Box flexGrow={1}></Box>
           <IconButton
             color="info"
             edge="end"
@@ -172,6 +172,7 @@ export default function Navbar(props: Props) {
             <TwitterIcon />
           </IconButton>
         </Toolbar>
+
       </AppBar>
       <Box component="nav">
         <Drawer
@@ -183,7 +184,7 @@ export default function Navbar(props: Props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", sm: "block", md: "none", lg: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
@@ -194,5 +195,6 @@ export default function Navbar(props: Props) {
         </Drawer>
       </Box>
     </Box>
+
   );
 }

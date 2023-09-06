@@ -9,14 +9,12 @@ const DAppLaunch: React.FC = () => {
     return (
         <Grid
             container
-            spacing={3}
             sx={{
                 backgroundColor: "transparent",
                 padding: 3,
                 borderRadius: 5,
                 boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-                marginLeft: 0, 
-                marginRight: 0,
+
             }}
         >
             <Grid

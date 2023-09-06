@@ -80,7 +80,27 @@ function App() {
         <div className="main-content">
           <section className="home">
             <div className="hero">
-              <span className="welcome-hero"> </span>
+              <span className="welcome-hero">
+                <Typography
+                  color="#0F9FA3"
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    fontWeight: "bold",
+                    flexGrow: 1,
+                    display: {
+                      xs: "block", sm: "none",
+                      md: "none",
+                      lg: "none",
+                      xl: "none"
+                    },
+                    fontSize:{
+                      xs: "2.25rem", // for screens 0px and up
+                    }
+                  }}
+                >
+                  Bull Bear Buddies
+                </Typography> </span>
             </div>
             <Grid
               container
@@ -97,6 +117,7 @@ function App() {
                 direction="column"
                 justifyContent="flex-start"
               >
+
                 <Typography
                   variant="h2"
                   sx={{
@@ -240,12 +261,12 @@ function App() {
             </Grid>
 
             {/*dApp area below  */}
-          
-            </section>
-            <section>
+
+          </section>
+          <section>
             <DAppLaunch />
-            </section>
-   
+          </section>
+
           {/*About section below  */}
           <section className="about">
             <Box sx={{
