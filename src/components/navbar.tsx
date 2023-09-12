@@ -37,14 +37,11 @@ export default function Navbar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
         <img
           src={logo}
           alt="bull bear buddies logo"
           style={{ maxHeight: "100px", marginRight: "10px" }}
         />
-      </Typography>
-
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -184,7 +181,7 @@ export default function Navbar(props: Props) {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", sm: "block", md: "none", lg: "none" },
+            display: { xs: "block", sm: "block", md: "block", lg: "none" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: drawerWidth,
