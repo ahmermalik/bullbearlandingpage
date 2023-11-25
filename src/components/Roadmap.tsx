@@ -13,13 +13,13 @@ const checklistData = [
       "Discord",
       "Twitter Page",
       "Marketing Campaigns",
-      "Tokenomics",
+      "Initial Features",
     ],
   },
   {
     title: "Phase II",
     tasks: [
-      "Token Launch",
+      "NFT Launch",
       "Casanova I Launch - Coins",
       "Daily Summary Report Launch",
       "Discord Mods",
@@ -30,10 +30,10 @@ const checklistData = [
     title: "Phase III",
     tasks: [
       "Casanova II Launch - NFTs",
-      "Telegram Notifications Beta",
+      "Notifications Beta",
       "Meta Alerts Launch",
       "Analyst Onboarding",
-      "Survey To Trade Launch"
+      "Risk Manager A.I. Launch"
     ],
   },
   {
@@ -41,8 +41,8 @@ const checklistData = [
     tasks: [
       "Aggregator Bot I Launch",
       "Gem Finder Launch",
-      "Trading Strategy Course Launch",
-      "Token Holder Exclusive Utilities",
+      "Strategy Launch: The 2, 5, & 15 Minute Analaysis",
+      "NFT Holder Exclusive Utilities",
     ],
   },
   {
@@ -50,7 +50,6 @@ const checklistData = [
     tasks: [
       "Casanova Guide Launch",
       "Trade Finder Launch",
-      "Monthly Subscription Model Launch",
       "Monthly Project Pitch",
       "Casanova Onchain Launch",
     ],
@@ -58,8 +57,7 @@ const checklistData = [
   {
     title: "Phase VII",
     tasks: [
-      "Token Holder Distribution Launch",
-      "Tokenomics Revamp For Profit Generation",
+      "Community Project Investment Launch",
       "Continue Adding Features To Casanova - Coin & NFT",
       "Continue Evolving Product!",
     ]

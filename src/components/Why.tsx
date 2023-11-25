@@ -3,7 +3,7 @@ import { Grid, Typography, Button } from "@mui/material";
 import winners from "../images/winners.png";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/system";
-import Proof from "./Proof";
+import Quote from "./Quote";
 import HoverableImage from "../utils/HoverableImage";
 
 
@@ -105,43 +105,7 @@ const Why = () => {
   >
     Join Presale
   </Button>
-  <Button
-    onClick={() => setShowToggleComponent(!showToggleComponent)}
-    variant="contained"
-    sx={{
-      borderRadius: 6,
-      color: "#0E9296",
-      background: "transparent",
-      border: "1px solid transparent",
-      position: "relative",
-      overflow: "hidden",
-      height: 48,
-      width: 175,
-      zIndex: 0,
-      marginTop: { xs: '5px', sm: '5px' },
-      marginBottom: '5px',
-      fontWeight: "bold",
-      "&::before": {
-        content: '""',
-        position: "absolute",
-        top: 0,
-        right: 0,
-        bottom: 0,
-        left: 0,
-        zIndex: -1,
-        background: "white",
-        border: 0,
-        borderRadius: 3,
-        padding: "0 30px",
-        transition: "0.4s",
-      },
-      "&:hover": {
-        background: "transparent",
-      },
-    }}
-  >
-    Proof of Gains
-  </Button>
+
 </Box>
 
           </div>
@@ -162,8 +126,11 @@ const Why = () => {
           </Box>
         </Grid>
       </Grid>
-
-     {showToggleComponent && <Proof/> }
+      <div style={{textAlign:'center', marginTop: '50px'}}>
+   <Quote />
+<Typography sx={{ fontWeight: "bold", marginTop:"10px" }}> You Are Not Alone in These Pursuits.</Typography>
+<Typography sx={{ fontWeight: "bold" }}> Join Us.</Typography>
+</div>
     </div>
   );
 };

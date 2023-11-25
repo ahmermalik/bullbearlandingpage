@@ -149,13 +149,11 @@ function App() {
                     },
                   }}
                 >
-                  Welcome to our <strong>Token Holder website</strong>, where
-                  cutting-edge technology scours the blockchain in real-time to
-                  uncover the most promising launches. Experience a new
-                  dimension of investing, where trading profits are effortlessly
-                  distributed among our community of investors. Join us and
-                  embrace a future where your tokens hold the{" "}
-                  <strong>key to unparalleled success</strong>.
+
+                 <strong>Welcome to Our Trading Platform. </strong> 
+
+                   Discover the efficiency of automated technical analysis for crypto and NFT trading. 
+                   Our platform offers easy-to-use tools and a supportive community, making trading simpler and more successful for everyone.
                 </Typography>
 
                 <span style={{ marginTop: "12px" }}>
