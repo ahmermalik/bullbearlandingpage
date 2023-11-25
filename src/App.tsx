@@ -1,5 +1,5 @@
 // React core
-import { useState } from "react";
+import { useEffect, useState } from 'react';
 
 // MUI imports
 import Box from "@mui/material/Box";
@@ -63,6 +63,10 @@ const theme = createTheme({
 });
 
 function App() {
+  useEffect(() => {
+    document.title = "Bull Bear Buddies | Automated Crypto & NFT Analytics Platform for Smart Investors";
+  }, []);
+
   useTrackScrollToBottom();
   const track = (button: string) => {
     mixpanel.track(button);
