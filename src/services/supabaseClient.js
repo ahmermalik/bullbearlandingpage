@@ -7,7 +7,4 @@ const SUPABASE_ANON_KEY = process.env.REACT_APP_SUPABASE_ANON_KEY;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-console.log('Supabase URL:', SUPABASE_URL);
-console.log('Supabase Anon Key:', SUPABASE_ANON_KEY);
-
 export default supabase;
